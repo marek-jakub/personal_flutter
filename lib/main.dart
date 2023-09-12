@@ -1,13 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import '../models/models.dart';
+import '../router/route_generator.dart';
+
+import 'personalme_theme.dart';
 
 void main() {
   runApp(const JakubPersonal());
 }
 
-class JakubPersonal extends StatelessWidget {
+class JakubPersonal extends StatefulWidget {
   const JakubPersonal({super.key});
 
-  // This widget is the root of your application.
+  @override
+  State<JakubPersonal> createState() => _JakubPersonalState();
+}
+
+class _JakubPersonalState extends State<JakubPersonal> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -31,18 +41,30 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  final _stateManager = StateManager();
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[],
-        ),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (context) => _stateManager),
+      ],
+      child: Consumer<StateManager>(
+        builder: (context, stateManager, child) {
+          ThemeData theme;
+          if (stateManager.darkMode) {
+            theme = MonitoRingTheme.dark();
+          } else {
+            theme = MonitoRingTheme.light();
+          }
+
+          return MaterialApp(
+            debugShowCheckedModeBanner: false,
+            theme: theme,
+            initialRoute: '/',
+            onGenerateRoute: RouteGenerator.generateRoute,
+          );
+        },
       ),
     );
   }
