@@ -10,7 +10,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int index = 0;
-  //late AppDb _db;
+
   final pages = const [
     // EmployeeNotifierFutureScreen(),
     // EmployeeNotifierStreamScreen(),
@@ -21,13 +21,10 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();
-
-    //_db = AppDb();
   }
 
   @override
   void dispose() {
-    //_db.close();
     super.dispose();
   }
 
@@ -37,7 +34,7 @@ class _HomeScreenState extends State<HomeScreen> {
       body: pages[index],
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () {
-          Navigator.pushNamed(context, '/add_employee');
+          Navigator.pushNamed(context, '/about');
         },
         icon: const Icon(Icons.add),
         label: const Text('Add Employee'),
