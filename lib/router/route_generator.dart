@@ -9,16 +9,12 @@ class RouteGenerator {
     switch (settings.name) {
       case '/':
         return MaterialPageRoute(builder: (_) => const HomeScreen());
-      // case '/articles':
-      //   return MaterialPageRoute(builder: (_) => const Articles());
-      // case '/edit_employee':
-      //   if (args is int) {
-      //     return MaterialPageRoute(
-      //         builder: (_) => EditEmployeeScreen(id: args));
-      //   }
-      //   return _errorRoute();
       case '/about':
         return MaterialPageRoute(builder: (_) => const AboutScreen());
+      case '/articles':
+        return MaterialPageRoute(builder: (_) => const ArticlesScreen());
+      case '/photos':
+        return MaterialPageRoute(builder: (_) => const PhotosScreen());
       default:
         return _errorRoute();
     }
