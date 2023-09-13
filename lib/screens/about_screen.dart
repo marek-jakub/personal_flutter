@@ -17,7 +17,7 @@ class AboutScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            Text('search_screen'),
+            Text('about_screen'),
           ],
         ),
       ),
