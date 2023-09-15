@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../models/models.dart';
+import '../screens/screens.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -11,11 +14,11 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int index = 0;
 
-  final pages = const [
-    // EmployeeNotifierFutureScreen(),
-    // EmployeeNotifierStreamScreen(),
-    // EmployeeAddressScreen()
-    //EmployeeStreamScreen()
+  final pages = [
+    WelcomeScreen(),
+    ArticlesScreen(),
+    PhotosScreen(),
+    AboutScreen(),
   ];
 
   @override
@@ -32,13 +35,6 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: pages[index],
-      floatingActionButton: FloatingActionButton.extended(
-        onPressed: () {
-          Navigator.pushNamed(context, '/about');
-        },
-        icon: const Icon(Icons.add),
-        label: const Text('Add Employee'),
-      ),
     );
   }
 }
