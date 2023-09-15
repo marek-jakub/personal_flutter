@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
+import '../models/models.dart';
 import '../screens/screens.dart';
 
 class RouteGenerator {
@@ -15,6 +17,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const ArticlesScreen());
       case '/photos':
         return MaterialPageRoute(builder: (_) => const PhotosScreen());
+      case '/welcome':
+        return MaterialPageRoute(builder: (_) => const WelcomeScreen());
       default:
         return _errorRoute();
     }
