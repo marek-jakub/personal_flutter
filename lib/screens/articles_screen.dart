@@ -9,15 +9,45 @@ class ArticlesScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Articles'),
+        automaticallyImplyLeading: false,
         centerTitle: true,
       ),
-      body: const Padding(
+      body: Padding(
         padding: EdgeInsets.all(8.0),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            Text('articles_screen'),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(5.0, 2.0, 2.0, 2.0),
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/welcome');
+                    },
+                    child: const Text('Home'),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/photos');
+                    },
+                    child: const Text('Photo of the Month'),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/about');
+                    },
+                    child: const Text('About'),
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),
