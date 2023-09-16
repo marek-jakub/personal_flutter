@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:personalme/models/models.dart';
+
+import '../models/models.dart';
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({
@@ -25,15 +26,16 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               Padding(
                 padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
                 child: Switch(
-                    value: stateManager.darkMode,
-                    onChanged: (value) {
-                      stateManager.setDarkMode = value;
-                    }),
+                  value: stateManager.darkMode,
+                  onChanged: (value) {
+                    stateManager.setDarkMode = value;
+                  },
+                ),
               )
             ],
           ),
           body: Padding(
-            padding: EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(8.0),
             child: Column(
               children: <Widget>[
                 Row(
@@ -75,6 +77,4 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
       },
     );
   }
-
-  void setMode() {}
 }
