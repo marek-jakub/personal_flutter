@@ -13,10 +13,10 @@ class _HomeScreenState extends State<HomeScreen> {
   int index = 0;
 
   final pages = [
-    WelcomeScreen(),
-    ArticlesScreen(),
-    PhotosScreen(),
-    AboutScreen(),
+    const WelcomeScreen(),
+    const ArticlesScreen(),
+    const PhotosScreen(),
+    const AboutScreen(),
   ];
 
   @override
