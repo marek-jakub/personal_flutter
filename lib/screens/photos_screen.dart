@@ -1,56 +1,75 @@
 import 'package:flutter/material.dart';
-//import 'package:provider/provider.dart';
+import 'package:provider/provider.dart';
 
-class PhotosScreen extends StatelessWidget {
+import '../models/models.dart';
+
+class PhotosScreen extends StatefulWidget {
   const PhotosScreen({Key? key}) : super(key: key);
 
   @override
+  State<PhotosScreen> createState() => _PhotosScreenState();
+}
+
+class _PhotosScreenState extends State<PhotosScreen> {
+  @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Photos'),
-        automaticallyImplyLeading: false,
-        centerTitle: true,
-      ),
-      body: Padding(
-        padding: EdgeInsets.all(8.0),
-        child: Column(
-          children: <Widget>[
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(5.0, 2.0, 2.0, 2.0),
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, '/welcome');
-                    },
-                    child: const Text('Home'),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, '/articles');
-                    },
-                    child: const Text('Articles'),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, '/about');
-                    },
-                    child: const Text('About'),
-                  ),
-                ),
-              ],
-            ),
+    return Consumer<StateManager>(builder: (context, stateManager, child) {
+      return Scaffold(
+        appBar: AppBar(
+          title: const Text('Marek Jakub: Photos'),
+          automaticallyImplyLeading: false,
+          centerTitle: true,
+          actions: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
+              child: Switch(
+                  value: stateManager.darkMode,
+                  onChanged: (value) {
+                    stateManager.setDarkMode = value;
+                  }),
+            )
           ],
         ),
-      ),
-    );
+        body: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            children: <Widget>[
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(5.0, 2.0, 2.0, 2.0),
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/welcome');
+                      },
+                      child: const Text('Home'),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/articles');
+                      },
+                      child: const Text('Articles'),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/about');
+                      },
+                      child: const Text('About'),
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      );
+    });
   }
 }
