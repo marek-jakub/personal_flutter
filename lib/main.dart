@@ -7,42 +7,18 @@ import '../router/route_generator.dart';
 import 'personalme_theme.dart';
 
 void main() {
-  runApp(const JakubPersonal());
+  runApp(const MarkPersonal());
 }
 
-class JakubPersonal extends StatefulWidget {
-  const JakubPersonal({super.key});
+class MarkPersonal extends StatefulWidget {
+  const MarkPersonal({super.key});
 
   @override
-  State<JakubPersonal> createState() => _JakubPersonalState();
+  State<MarkPersonal> createState() => _MarkPersonalState();
 }
 
-class _JakubPersonalState extends State<JakubPersonal> {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Marek Jakub',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const MyHomePage(title: 'Marek Jakub'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
+class _MarkPersonalState extends State<MarkPersonal> {
   final _stateManager = StateManager();
-
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
