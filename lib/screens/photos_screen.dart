@@ -20,14 +20,16 @@ class _PhotosScreenState extends State<PhotosScreen> {
           automaticallyImplyLeading: false,
           centerTitle: true,
           actions: [
-            Padding(
-              padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
-              child: Switch(
-                  value: stateManager.darkMode,
-                  onChanged: (value) {
-                    stateManager.setDarkMode = value;
-                  }),
-            )
+            const Icon(Icons.light_mode),
+            Switch(
+              value: stateManager.darkMode,
+              onChanged: (value) {
+                stateManager.setDarkMode = value;
+              },
+            ),
+            const Padding(
+                padding: EdgeInsets.fromLTRB(0, 0, 70, 0),
+                child: Icon(Icons.dark_mode)),
           ],
         ),
         body: Padding(
