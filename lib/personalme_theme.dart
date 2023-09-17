@@ -98,10 +98,6 @@ class MonitoRingTheme {
       brightness: Brightness.light,
       primarySwatch: customLightSwatch,
       scaffoldBackgroundColor: Colors.grey[200],
-      checkboxTheme:
-          CheckboxThemeData(fillColor: MaterialStateColor.resolveWith((states) {
-        return Colors.black;
-      })),
       appBarTheme: AppBarTheme(
         titleTextStyle: const TextStyle(fontSize: 14.0, color: Colors.black),
         centerTitle: true,
@@ -118,29 +114,6 @@ class MonitoRingTheme {
       floatingActionButtonTheme: FloatingActionButtonThemeData(
         foregroundColor: Colors.white,
         backgroundColor: Colors.grey[800],
-      ),
-      bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-        selectedItemColor: Colors.green,
-      ),
-      inputDecorationTheme: const InputDecorationTheme(
-        border: OutlineInputBorder(
-          borderSide: BorderSide(
-            width: 1.0,
-            color: Colors.black,
-          ),
-        ),
-        focusedBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.green),
-        ),
-        enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.black),
-        ),
-        errorBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.red),
-        ),
-        focusedErrorBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.red),
-        ),
       ),
       cardColor: Colors.grey.shade400,
       cardTheme: const CardTheme(
