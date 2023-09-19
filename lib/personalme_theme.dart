@@ -54,6 +54,16 @@ class MonitoRingTheme {
       fontWeight: FontWeight.w700,
       color: Colors.white,
     ),
+    bodyMedium: GoogleFonts.openSans(
+      fontSize: 14.0,
+      fontWeight: FontWeight.w700,
+      color: Colors.white,
+    ),
+    bodySmall: GoogleFonts.openSans(
+      fontSize: 14.0,
+      fontWeight: FontWeight.w700,
+      color: Colors.white,
+    ),
     headlineLarge: GoogleFonts.openSans(
       fontSize: 32.0,
       fontWeight: FontWeight.bold,
@@ -71,6 +81,11 @@ class MonitoRingTheme {
     ),
     titleMedium: GoogleFonts.openSans(
       fontSize: 20.0,
+      fontWeight: FontWeight.w600,
+      color: Colors.white,
+    ),
+    titleSmall: GoogleFonts.openSans(
+      fontSize: 14.0,
       fontWeight: FontWeight.w600,
       color: Colors.white,
     ),
@@ -155,10 +170,6 @@ class MonitoRingTheme {
       brightness: Brightness.dark,
       primarySwatch: customDarkSwatch,
       scaffoldBackgroundColor: Colors.grey[800],
-      checkboxTheme:
-          CheckboxThemeData(fillColor: MaterialStateColor.resolveWith((states) {
-        return Colors.grey;
-      })),
       appBarTheme: AppBarTheme(
         titleTextStyle: const TextStyle(fontSize: 14.0, color: Colors.white),
         centerTitle: true,
@@ -175,29 +186,6 @@ class MonitoRingTheme {
       floatingActionButtonTheme: const FloatingActionButtonThemeData(
         foregroundColor: Colors.white,
         backgroundColor: Colors.grey,
-      ),
-      bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-        selectedItemColor: Colors.green,
-      ),
-      inputDecorationTheme: const InputDecorationTheme(
-        border: OutlineInputBorder(
-          borderSide: BorderSide(
-            width: 1.0,
-            color: Colors.white,
-          ),
-        ),
-        focusedBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.green),
-        ),
-        enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.grey),
-        ),
-        errorBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.red),
-        ),
-        focusedErrorBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.red),
-        ),
       ),
       cardColor: Colors.blueGrey,
       cardTheme: const CardTheme(
