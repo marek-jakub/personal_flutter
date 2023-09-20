@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:sizer/sizer.dart';
 
 import '../models/models.dart';
 import '../router/route_generator.dart';
@@ -34,12 +35,14 @@ class _MarkPersonalState extends State<MarkPersonal> {
             theme = MonitoRingTheme.light();
           }
 
-          return MaterialApp(
-            debugShowCheckedModeBanner: false,
-            theme: theme,
-            initialRoute: '/',
-            onGenerateRoute: RouteGenerator.generateRoute,
-          );
+          return Sizer(builder: (context, orientation, deviceType) {
+            return MaterialApp(
+              debugShowCheckedModeBanner: false,
+              theme: theme,
+              initialRoute: '/',
+              onGenerateRoute: RouteGenerator.generateRoute,
+            );
+          });
         },
       ),
     );
