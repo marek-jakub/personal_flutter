@@ -14,9 +14,31 @@ class CustomConnectText extends StatelessWidget {
       child: Container(
         alignment: Alignment.bottomCenter,
         width: 80.w,
-        child: const Text(
-          style: TextStyle(fontSize: 17),
-          'email',
+        child: const Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Text(
+                style: TextStyle(fontSize: 15),
+                'email',
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Text(
+                style: TextStyle(fontSize: 15),
+                'HackerRank',
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Text(
+                style: TextStyle(fontSize: 15),
+                'GitHub',
+              ),
+            ),
+          ],
         ),
       ),
     );
