@@ -189,7 +189,7 @@ class _AboutScreenState extends State<AboutScreen> {
               ],
             ),
             SizedBox(
-              height: 20.h,
+              height: 30.h,
             ),
             const CustomConnectText(),
           ],
