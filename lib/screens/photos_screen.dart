@@ -13,6 +13,8 @@ class PhotosScreen extends StatefulWidget {
 class _PhotosScreenState extends State<PhotosScreen> {
   @override
   Widget build(BuildContext context) {
+    final double screenWidth = MediaQuery.of(context).size.width;
+
     return Consumer<StateManager>(builder: (context, stateManager, child) {
       return Scaffold(
         appBar: AppBar(
@@ -32,49 +34,65 @@ class _PhotosScreenState extends State<PhotosScreen> {
                 child: Icon(Icons.dark_mode)),
           ],
         ),
-        body: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.fromLTRB(0, 10, 0, 25),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(5.0, 2.0, 2.0, 2.0),
-                      child: ElevatedButton(
-                        onPressed: () {
-                          Navigator.pushNamed(context, '/welcome');
-                        },
-                        child: const Text('Home'),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
-                      child: ElevatedButton(
-                        onPressed: () {
-                          Navigator.pushNamed(context, '/articles');
-                        },
-                        child: const Text('Articles'),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
-                      child: ElevatedButton(
-                        onPressed: () {
-                          Navigator.pushNamed(context, '/about');
-                        },
-                        child: const Text('About'),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-        ),
+        body: screenWidth < 700
+            ? smallScreenLayout()
+            : screenWidth < 1200
+                ? mediumScreenLayout()
+                : largeScreenLayout(),
       );
     });
+  }
+
+  Widget smallScreenLayout() {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Column(
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.fromLTRB(0, 10, 0, 25),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(5.0, 2.0, 2.0, 2.0),
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/welcome');
+                    },
+                    child: const Text('Home'),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/articles');
+                    },
+                    child: const Text('Articles'),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/about');
+                    },
+                    child: const Text('About'),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget mediumScreenLayout() {
+    return const Text('medium screen layout');
+  }
+
+  Widget largeScreenLayout() {
+    return const Text('large screen layout');
   }
 }
