@@ -14,6 +14,8 @@ class ArticlesScreen extends StatefulWidget {
 class _ArticlesScreenState extends State<ArticlesScreen> {
   @override
   Widget build(BuildContext context) {
+    final double screenWidth = MediaQuery.of(context).size.width;
+
     return Consumer<StateManager>(
       builder: (context, stateManager, child) {
         return Scaffold(
@@ -34,53 +36,69 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
                   child: Icon(Icons.dark_mode)),
             ],
           ),
-          body: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Column(
-              children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 10, 0, 25),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(5.0, 2.0, 2.0, 2.0),
-                        child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.pushNamed(context, '/welcome');
-                          },
-                          child: const Text('Home'),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
-                        child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.pushNamed(context, '/photos');
-                          },
-                          child: const Text('Photo of the Month'),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
-                        child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.pushNamed(context, '/about');
-                          },
-                          child: const Text('About'),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                const CustomDateText(date: '2023'),
-                const CustomDateText(date: '2022'),
-                const CustomDateText(date: '2021'),
-              ],
-            ),
-          ),
+          body: screenWidth < 700
+              ? smallScreenLayout()
+              : screenWidth < 1200
+                  ? mediumScreenLayout()
+                  : largeScreenLayout(),
         );
       },
     );
+  }
+
+  Widget smallScreenLayout() {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Column(
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.fromLTRB(0, 10, 0, 25),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(5.0, 2.0, 2.0, 2.0),
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/welcome');
+                    },
+                    child: const Text('Home'),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/photos');
+                    },
+                    child: const Text('Photo of the Month'),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/about');
+                    },
+                    child: const Text('About'),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const CustomDateText(date: '2023'),
+          const CustomDateText(date: '2022'),
+          const CustomDateText(date: '2021'),
+        ],
+      ),
+    );
+  }
+
+  Widget mediumScreenLayout() {
+    return const Text('medium screen layout');
+  }
+
+  Widget largeScreenLayout() {
+    return const Text('large screen layout');
   }
 }
