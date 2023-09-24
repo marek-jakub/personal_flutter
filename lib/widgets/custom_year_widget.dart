@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
 
 /// A text widget in a sized box.
 class CustomDateText extends StatelessWidget {
@@ -15,7 +16,7 @@ class CustomDateText extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.fromLTRB(0, 25, 0, 25),
       child: SizedBox(
-        width: 550,
+        width: 80.w,
         child: Text(
           style: TextStyle(fontSize: 17),
           _date,
