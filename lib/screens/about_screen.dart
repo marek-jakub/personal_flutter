@@ -37,140 +37,139 @@ class _AboutScreenState extends State<AboutScreen> {
                 child: const Icon(Icons.dark_mode)),
           ],
         ),
-        body: screenWidth < 700
-            ? smallScreenLayout()
-            : screenWidth < 1200
-                ? mediumScreenLayout()
-                : largeScreenLayout(),
+        body: Container(
+          alignment: Alignment.topCenter,
+          child: SingleChildScrollView(
+            child: screenWidth < 700
+                ? smallScreenLayout()
+                : screenWidth < 1200
+                    ? mediumScreenLayout()
+                    : largeScreenLayout(),
+          ),
+        ),
       );
     });
   }
 
   Widget smallScreenLayout() {
-    return SingleChildScrollView(
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          children: <Widget>[
-            const CustomNavButtons(),
-            const Image(
-              fit: BoxFit.scaleDown,
-              image: AssetImage('assets/images/MJ_small.jpg'),
-              width: 300,
-              height: 210,
-            ),
-            Padding(
-              padding: const EdgeInsets.all(15.0),
-              child: SizedBox(
-                width: 60.w,
-                height: 30.h,
-                child: const MarkupText(
-                  "Marek Jakub is a student of Computing and Information Technologies (IT) at"
-                  " The Open University (The OU), Milton Keynes, UK. He holds a BSc (Hons) in"
-                  " Natural Sciences from the same university. When he is not engaged in study,"
-                  " he might be found occupied with his other interests: biology or sport."
-                  " He lives in Slovakia.",
-                  style: TextStyle(),
-                  textAlign: TextAlign.justify,
-                ),
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Column(
+        children: <Widget>[
+          const CustomNavButtons(),
+          const Image(
+            fit: BoxFit.scaleDown,
+            image: AssetImage('assets/images/MJ_small.jpg'),
+            width: 300,
+            height: 210,
+          ),
+          Padding(
+            padding: const EdgeInsets.all(15.0),
+            child: SizedBox(
+              width: 60.w,
+              height: 30.h,
+              child: const MarkupText(
+                "Marek Jakub is a student of Computing and Information Technologies (IT) at"
+                " The Open University (The OU), Milton Keynes, UK. He holds a BSc (Hons) in"
+                " Natural Sciences from the same university. When he is not engaged in study,"
+                " he might be found occupied with his other interests: biology or sport."
+                " He lives in Slovakia.",
+                style: TextStyle(),
+                textAlign: TextAlign.justify,
               ),
             ),
-            SizedBox(
-              height: 20.h,
-            ),
-            const CustomConnectText(),
-          ],
-        ),
+          ),
+          SizedBox(
+            height: 12.h,
+          ),
+          const CustomConnectText(),
+        ],
       ),
     );
   }
 
   Widget mediumScreenLayout() {
-    return SingleChildScrollView(
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          children: <Widget>[
-            const CustomNavButtons(),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Image(
-                  fit: BoxFit.scaleDown,
-                  image: AssetImage('assets/images/MJ_small.jpg'),
-                  width: 360,
-                  height: 270,
-                ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(15, 5, 15, 10),
-                  child: SizedBox(
-                    width: 25.w,
-                    height: 30.h,
-                    child: const MarkupText(
-                      "Marek Jakub is a student of Computing and Information Technologies (IT) at"
-                      " The Open University (The OU), Milton Keynes, UK. He holds a BSc (Hons) in"
-                      " Natural Sciences from the same university. When he is not engaged in study,"
-                      " he might be found occupied with his other interests: biology or sport."
-                      " He lives in Slovakia.",
-                      style: TextStyle(),
-                      textAlign: TextAlign.justify,
-                    ),
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Column(
+        children: <Widget>[
+          const CustomNavButtons(),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Image(
+                fit: BoxFit.scaleDown,
+                image: AssetImage('assets/images/MJ_small.jpg'),
+                width: 360,
+                height: 270,
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(15, 5, 15, 10),
+                child: SizedBox(
+                  width: 25.w,
+                  height: 30.h,
+                  child: const MarkupText(
+                    "Marek Jakub is a student of Computing and Information Technologies (IT) at"
+                    " The Open University (The OU), Milton Keynes, UK. He holds a BSc (Hons) in"
+                    " Natural Sciences from the same university. When he is not engaged in study,"
+                    " he might be found occupied with his other interests: biology or sport."
+                    " He lives in Slovakia.",
+                    style: TextStyle(),
+                    textAlign: TextAlign.justify,
                   ),
                 ),
-              ],
-            ),
-            SizedBox(
-              height: 30.h,
-            ),
-            const CustomConnectText(),
-          ],
-        ),
+              ),
+            ],
+          ),
+          SizedBox(
+            height: 30.h,
+          ),
+          const CustomConnectText(),
+        ],
       ),
     );
   }
 
   Widget largeScreenLayout() {
-    return SingleChildScrollView(
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          children: <Widget>[
-            const CustomNavButtons(),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Image(
-                  fit: BoxFit.scaleDown,
-                  image: AssetImage('assets/images/MJ_small.jpg'),
-                  // width: 360,
-                  // height: 270,
-                ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(15, 5, 15, 10),
-                  child: SizedBox(
-                    width: 25.w,
-                    height: 30.h,
-                    child: const MarkupText(
-                      "Marek Jakub is a student of Computing and Information Technologies (IT) at"
-                      " The Open University (The OU), Milton Keynes, UK. He holds a BSc (Hons) in"
-                      " Natural Sciences from the same university. When he is not engaged in study,"
-                      " he might be found occupied with his other interests: biology or sport."
-                      " He lives in Slovakia.",
-                      style: TextStyle(),
-                      textAlign: TextAlign.justify,
-                    ),
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Column(
+        children: <Widget>[
+          const CustomNavButtons(),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Image(
+                fit: BoxFit.scaleDown,
+                image: AssetImage('assets/images/MJ_small.jpg'),
+                // width: 360,
+                // height: 270,
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(15, 5, 15, 10),
+                child: SizedBox(
+                  width: 25.w,
+                  height: 30.h,
+                  child: const MarkupText(
+                    "Marek Jakub is a student of Computing and Information Technologies (IT) at"
+                    " The Open University (The OU), Milton Keynes, UK. He holds a BSc (Hons) in"
+                    " Natural Sciences from the same university. When he is not engaged in study,"
+                    " he might be found occupied with his other interests: biology or sport."
+                    " He lives in Slovakia.",
+                    style: TextStyle(),
+                    textAlign: TextAlign.justify,
                   ),
                 ),
-              ],
-            ),
-            SizedBox(
-              height: 20.h,
-            ),
-            const CustomConnectText(),
-          ],
-        ),
+              ),
+            ],
+          ),
+          SizedBox(
+            height: 20.h,
+          ),
+          const CustomConnectText(),
+        ],
       ),
     );
   }
