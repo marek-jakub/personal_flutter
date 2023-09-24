@@ -122,7 +122,7 @@ class MonitoRingTheme {
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ButtonStyle(
           minimumSize: MaterialStateProperty.all(
-            const Size(150, 40),
+            const Size(165, 40),
           ),
         ),
       ),
@@ -179,7 +179,7 @@ class MonitoRingTheme {
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ButtonStyle(
           minimumSize: MaterialStateProperty.all(
-            const Size(150, 40),
+            const Size(165, 40),
           ),
         ),
       ),
