@@ -52,41 +52,7 @@ class _AboutScreenState extends State<AboutScreen> {
         padding: const EdgeInsets.all(8.0),
         child: Column(
           children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.fromLTRB(0, 10, 0, 25),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(5.0, 2.0, 2.0, 2.0),
-                    child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/welcome');
-                      },
-                      child: const Text('Home'),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
-                    child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/articles');
-                      },
-                      child: const Text('Articles'),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
-                    child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/photos');
-                      },
-                      child: const Text('Photo of the Month'),
-                    ),
-                  ),
-                ],
-              ),
-            ),
+            const CustomNavButtons(),
             const Image(
               fit: BoxFit.scaleDown,
               image: AssetImage('assets/images/MJ_small.jpg'),
@@ -125,41 +91,7 @@ class _AboutScreenState extends State<AboutScreen> {
         padding: const EdgeInsets.all(8.0),
         child: Column(
           children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.fromLTRB(0, 10, 0, 25),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(5.0, 2.0, 2.0, 2.0),
-                    child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/welcome');
-                      },
-                      child: const Text('Home'),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
-                    child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/articles');
-                      },
-                      child: const Text('Articles'),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
-                    child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/photos');
-                      },
-                      child: const Text('Photo of the Month'),
-                    ),
-                  ),
-                ],
-              ),
-            ),
+            const CustomNavButtons(),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -204,41 +136,7 @@ class _AboutScreenState extends State<AboutScreen> {
         padding: const EdgeInsets.all(8.0),
         child: Column(
           children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.fromLTRB(0, 10, 0, 25),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(5.0, 2.0, 2.0, 2.0),
-                    child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/welcome');
-                      },
-                      child: const Text('Home'),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
-                    child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/articles');
-                      },
-                      child: const Text('Articles'),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
-                    child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/photos');
-                      },
-                      child: const Text('Photo of the Month'),
-                    ),
-                  ),
-                ],
-              ),
-            ),
+            const CustomNavButtons(),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
