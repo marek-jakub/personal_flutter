@@ -35,11 +35,16 @@ class _PhotosScreenState extends State<PhotosScreen> {
                 child: Icon(Icons.dark_mode)),
           ],
         ),
-        body: screenWidth < 700
-            ? smallScreenLayout()
-            : screenWidth < 1200
-                ? mediumScreenLayout()
-                : largeScreenLayout(),
+        body: Container(
+          alignment: Alignment.topCenter,
+          child: SingleChildScrollView(
+            child: screenWidth < 700
+                ? smallScreenLayout()
+                : screenWidth < 1200
+                    ? mediumScreenLayout()
+                    : largeScreenLayout(),
+          ),
+        ),
       );
     });
   }
