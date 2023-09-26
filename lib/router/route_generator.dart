@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
 import '../screens/screens.dart';
+import '../screens/articles/articles.dart';
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
-    final args = settings.arguments;
+    //final args = settings.arguments;
 
     switch (settings.name) {
       case '/':
@@ -17,6 +18,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const PhotosScreen());
       case '/welcome':
         return MaterialPageRoute(builder: (_) => const WelcomeScreen());
+      case '/binarytree':
+        return MaterialPageRoute(builder: (_) => const BinaryTreeArticle());
       default:
         return _errorRoute();
     }
