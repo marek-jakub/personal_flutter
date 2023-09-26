@@ -1,6 +1,9 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart' show rootBundle;
+import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:provider/provider.dart';
+import 'package:markup_text/markup_text.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../../../models/models.dart';
@@ -38,27 +41,51 @@ class _BinaryTreeArticleState extends State<BinaryTreeArticle> {
                   child: Icon(Icons.dark_mode)),
             ],
           ),
-          body: Container(
-            alignment: Alignment.topCenter,
-            child: SingleChildScrollView(
-              child: screenWidth < 700
-                  ? smallScreenLayout()
-                  : screenWidth < 1200
-                      ? mediumScreenLayout()
-                      : largeScreenLayout(),
-            ),
+          body: FutureBuilder<String>(
+            future: getArticle(),
+            builder: (context, snapshot) {
+              if (snapshot.hasData) {
+                return Container(
+                  alignment: Alignment.topCenter,
+                  child: SingleChildScrollView(
+                    child: screenWidth < 700
+                        ? smallScreenLayout(snapshot.data)
+                        : screenWidth < 1200
+                            ? mediumScreenLayout(snapshot.data)
+                            : largeScreenLayout(snapshot.data),
+                  ),
+                );
+              } else if (snapshot.hasError) {
+                return Container(
+                  alignment: Alignment.topCenter,
+                  child: SingleChildScrollView(
+                    child: screenWidth < 700
+                        ? smallScreenLayout('Error loading article')
+                        : screenWidth < 1200
+                            ? mediumScreenLayout('Error loading article')
+                            : largeScreenLayout('Error loading article'),
+                  ),
+                );
+              }
+              return const CircularProgressIndicator();
+            },
           ),
         );
       },
     );
   }
 
-  Widget smallScreenLayout() {
+  Widget smallScreenLayout(String? article) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Column(
         children: <Widget>[
           const CustomNavButtons(),
+          MarkupText(
+            article!,
+            style: const TextStyle(),
+            textAlign: TextAlign.justify,
+          ),
           SizedBox(
             height: 12.h,
           ),
@@ -68,12 +95,22 @@ class _BinaryTreeArticleState extends State<BinaryTreeArticle> {
     );
   }
 
-  Widget mediumScreenLayout() {
+  Widget mediumScreenLayout(String? article) {
+    debugPrint('Binary tree article: $article');
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Column(
         children: <Widget>[
           const CustomNavButtons(),
+          Markdown(
+            data: article ?? '',
+            shrinkWrap: true,
+          ),
+          // MarkupText(
+          //   article!,
+          //   style: const TextStyle(),
+          //   textAlign: TextAlign.justify,
+          // ),
           SizedBox(
             height: 12.h,
           ),
@@ -83,12 +120,17 @@ class _BinaryTreeArticleState extends State<BinaryTreeArticle> {
     );
   }
 
-  Widget largeScreenLayout() {
+  Widget largeScreenLayout(String? article) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Column(
         children: <Widget>[
           const CustomNavButtons(),
+          MarkupText(
+            article!,
+            style: const TextStyle(),
+            textAlign: TextAlign.justify,
+          ),
           SizedBox(
             height: 12.h,
           ),
@@ -96,5 +138,11 @@ class _BinaryTreeArticleState extends State<BinaryTreeArticle> {
         ],
       ),
     );
+  }
+
+  Future<String> getArticle() async {
+    final String article = await rootBundle
+        .loadString('assets/articles/2021/binary_tree_article.md');
+    return article;
   }
 }
