@@ -68,13 +68,9 @@ class _AboutScreenState extends State<AboutScreen> {
             child: SizedBox(
               width: 60.w,
               height: 30.h,
-              child: const MarkupText(
-                "Marek Jakub is a student of Computing and Information Technologies (IT) at"
-                " The Open University (The OU), Milton Keynes, UK. He holds a BSc (Hons) in"
-                " Natural Sciences from the same university. When he is not engaged in study,"
-                " he might be found occupied with his other interests: biology or sport."
-                " He lives in Slovakia.",
-                style: TextStyle(),
+              child: MarkupText(
+                getMarkupText(),
+                style: const TextStyle(),
                 textAlign: TextAlign.justify,
               ),
             ),
@@ -109,12 +105,8 @@ class _AboutScreenState extends State<AboutScreen> {
                 child: SizedBox(
                   width: 25.w,
                   height: 30.h,
-                  child: const MarkupText(
-                    "Marek Jakub is a student of Computing and Information Technologies (IT) at"
-                    " The Open University (The OU), Milton Keynes, UK. He holds a BSc (Hons) in"
-                    " Natural Sciences from the same university. When he is not engaged in study,"
-                    " he might be found occupied with his other interests: biology or sport."
-                    " He lives in Slovakia.",
+                  child: MarkupText(
+                    getMarkupText(),
                     style: TextStyle(),
                     textAlign: TextAlign.justify,
                   ),
@@ -152,12 +144,8 @@ class _AboutScreenState extends State<AboutScreen> {
                 child: SizedBox(
                   width: 25.w,
                   height: 30.h,
-                  child: const MarkupText(
-                    "Marek Jakub is a student of Computing and Information Technologies (IT) at"
-                    " The Open University (The OU), Milton Keynes, UK. He holds a BSc (Hons) in"
-                    " Natural Sciences from the same university. When he is not engaged in study,"
-                    " he might be found occupied with his other interests: biology or sport."
-                    " He lives in Slovakia.",
+                  child: MarkupText(
+                    getMarkupText(),
                     style: TextStyle(),
                     textAlign: TextAlign.justify,
                   ),
@@ -172,5 +160,13 @@ class _AboutScreenState extends State<AboutScreen> {
         ],
       ),
     );
+  }
+
+  String getMarkupText() {
+    return "Marek Jakub is a student of Computing and Information Technologies (IT) at"
+        " The Open University (The OU), Milton Keynes, UK. He holds a BSc (Hons) in"
+        " Natural Sciences from the same university. When he is not engaged in study,"
+        " he might be found occupied with his other interests: biology or sport."
+        " He lives in Slovakia.";
   }
 }
