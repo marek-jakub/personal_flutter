@@ -39,7 +39,8 @@ flutter:
     - assets/images/
     - assets/articles/
     - assets/articles/2021/
-    - assets/articles/2021/binary_tree_article.md
+    - assets/articles/2021/article_01Sep2021.md
+    - assets/articles/2021/03_compared.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
