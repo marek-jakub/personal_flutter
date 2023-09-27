@@ -1,9 +1,9 @@
-import 'package:flutter/gestures.dart';
+//import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:provider/provider.dart';
-import 'package:markup_text/markup_text.dart';
+//import 'package:markup_text/markup_text.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../../../models/models.dart';
@@ -25,7 +25,7 @@ class _BinaryTreeArticleState extends State<BinaryTreeArticle> {
       builder: (context, stateManager, child) {
         return Scaffold(
           appBar: AppBar(
-            title: const Text('From binary tree to exponential search'),
+            title: const Text('Marek Jakub'),
             automaticallyImplyLeading: false,
             centerTitle: true,
             actions: [
@@ -81,10 +81,24 @@ class _BinaryTreeArticleState extends State<BinaryTreeArticle> {
       child: Column(
         children: <Widget>[
           const CustomNavButtons(),
-          MarkupText(
-            article!,
-            style: const TextStyle(),
-            textAlign: TextAlign.justify,
+          Markdown(
+            data: article ?? '',
+            shrinkWrap: true,
+            styleSheet: MarkdownStyleSheet(
+              p: const TextStyle(
+                fontSize: 12,
+                fontWeight: FontWeight.normal,
+              ),
+              textAlign: WrapAlignment.spaceEvenly,
+            ),
+            imageBuilder: (uri, title, alt) {
+              // return Image.asset(
+              //   uri.toString(),
+              // );
+              return Center(
+                child: Image.asset(uri.toString()),
+              );
+            },
           ),
           SizedBox(
             height: 12.h,
@@ -96,21 +110,30 @@ class _BinaryTreeArticleState extends State<BinaryTreeArticle> {
   }
 
   Widget mediumScreenLayout(String? article) {
-    debugPrint('Binary tree article: $article');
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: EdgeInsets.fromLTRB(5.w, 8, 5.w, 8),
       child: Column(
         children: <Widget>[
           const CustomNavButtons(),
           Markdown(
             data: article ?? '',
             shrinkWrap: true,
+            styleSheet: MarkdownStyleSheet(
+              p: const TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.normal,
+              ),
+              textAlign: WrapAlignment.spaceEvenly,
+            ),
+            imageBuilder: (uri, title, alt) {
+              return Center(
+                child: Image.asset(uri.toString()),
+              );
+              // return Image.asset(
+              //   uri.toString(),
+              // );
+            },
           ),
-          // MarkupText(
-          //   article!,
-          //   style: const TextStyle(),
-          //   textAlign: TextAlign.justify,
-          // ),
           SizedBox(
             height: 12.h,
           ),
@@ -122,14 +145,30 @@ class _BinaryTreeArticleState extends State<BinaryTreeArticle> {
 
   Widget largeScreenLayout(String? article) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: EdgeInsets.fromLTRB(20.w, 8, 20.w, 8),
       child: Column(
         children: <Widget>[
           const CustomNavButtons(),
-          MarkupText(
-            article!,
-            style: const TextStyle(),
-            textAlign: TextAlign.justify,
+          // If there is scrollable parent, use MarkdownBody
+          // instead of shrinkwrap: true.
+          Markdown(
+            data: article ?? '',
+            shrinkWrap: true,
+            styleSheet: MarkdownStyleSheet(
+              p: const TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.normal,
+              ),
+              textAlign: WrapAlignment.spaceEvenly,
+            ),
+            imageBuilder: (uri, title, alt) {
+              return Center(
+                child: Image.asset(uri.toString()),
+              );
+              // return Image.asset(
+              //   uri.toString(),
+              // );
+            },
           ),
           SizedBox(
             height: 12.h,
@@ -142,7 +181,7 @@ class _BinaryTreeArticleState extends State<BinaryTreeArticle> {
 
   Future<String> getArticle() async {
     final String article = await rootBundle
-        .loadString('assets/articles/2021/binary_tree_article.md');
+        .loadString('assets/articles/2021/article_01Sep2021.md');
     return article;
   }
 }
