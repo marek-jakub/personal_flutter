@@ -70,7 +70,6 @@ class _AboutScreenState extends State<AboutScreen> {
               height: 30.h,
               child: MarkupText(
                 getMarkupText(),
-                style: const TextStyle(),
                 textAlign: TextAlign.justify,
               ),
             ),
@@ -107,7 +106,6 @@ class _AboutScreenState extends State<AboutScreen> {
                   height: 30.h,
                   child: MarkupText(
                     getMarkupText(),
-                    style: TextStyle(),
                     textAlign: TextAlign.justify,
                   ),
                 ),
@@ -146,7 +144,6 @@ class _AboutScreenState extends State<AboutScreen> {
                   height: 30.h,
                   child: MarkupText(
                     getMarkupText(),
-                    style: TextStyle(),
                     textAlign: TextAlign.justify,
                   ),
                 ),
