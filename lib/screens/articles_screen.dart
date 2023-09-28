@@ -67,21 +67,49 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
             date: '2022',
             fontSize: 15,
           ),
+          const Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              CustomClickableArticle(
+                date: '17 Jul 2022',
+                articleName: 'In-order traversal of a nested list structure',
+                articlePath: '/traversal',
+                fontSize: 12,
+              ),
+              CustomClickableArticle(
+                date: '16 Mar 2022',
+                articleName: 'How not to solve HackerRank problems',
+                articlePath: '/solvenot',
+                fontSize: 12,
+              ),
+              CustomClickableArticle(
+                date: '27 Jan 2022',
+                articleName: 'Hunt for O(1) search',
+                articlePath: '/hunt',
+                fontSize: 12,
+              ),
+            ],
+          ),
           const CustomDateText(
             date: '2021',
             fontSize: 15,
           ),
-          const CustomClickableArticle(
-            date: '20 Nov 2021',
-            articleName: 'An old-fashioned library (bookcase)',
-            articlePath: '/bookcase',
-            fontSize: 12,
-          ),
-          const CustomClickableArticle(
-            date: '01 Sep 2021',
-            articleName: 'From binary tree to exponential search',
-            articlePath: '/binarytree',
-            fontSize: 12,
+          const Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              CustomClickableArticle(
+                date: '20 Nov 2021',
+                articleName: 'An old-fashioned library (bookcase)',
+                articlePath: '/bookcase',
+                fontSize: 12,
+              ),
+              CustomClickableArticle(
+                date: '01 Sep 2021',
+                articleName: 'From binary tree to exponential search',
+                articlePath: '/binarytree',
+                fontSize: 12,
+              ),
+            ],
           ),
           SizedBox(
             height: 12.h,
@@ -106,21 +134,49 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
             date: '2022',
             fontSize: 17,
           ),
+          const Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              CustomClickableArticle(
+                date: '17 Jul 2022',
+                articleName: 'In-order traversal of a nested list structure',
+                articlePath: '/traversal',
+                fontSize: 14,
+              ),
+              CustomClickableArticle(
+                date: '16 Mar 2022',
+                articleName: 'How not to solve HackerRank problems',
+                articlePath: '/solvenot',
+                fontSize: 14,
+              ),
+              CustomClickableArticle(
+                date: '27 Jan 2022',
+                articleName: 'Hunt for O(1) search',
+                articlePath: '/hunt',
+                fontSize: 14,
+              ),
+            ],
+          ),
           const CustomDateText(
             date: '2021',
             fontSize: 17,
           ),
-          const CustomClickableArticle(
-            date: '20 Nov 2021',
-            articleName: 'An old-fashioned library (bookcase)',
-            articlePath: '/bookcase',
-            fontSize: 15,
-          ),
-          const CustomClickableArticle(
-            date: '01 Sep 2021',
-            articleName: 'From binary tree to exponential search',
-            articlePath: '/binarytree',
-            fontSize: 15,
+          const Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              CustomClickableArticle(
+                date: '20 Nov 2021',
+                articleName: 'An old-fashioned library (bookcase)',
+                articlePath: '/bookcase',
+                fontSize: 14,
+              ),
+              CustomClickableArticle(
+                date: '01 Sep 2021',
+                articleName: 'From binary tree to exponential search',
+                articlePath: '/binarytree',
+                fontSize: 14,
+              ),
+            ],
           ),
           SizedBox(
             height: 12.h,
@@ -145,21 +201,49 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
             date: '2022',
             fontSize: 18,
           ),
+          const Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              CustomClickableArticle(
+                date: '17 Jul 2022',
+                articleName: 'In-order traversal of a nested list structure',
+                articlePath: '/traversal',
+                fontSize: 15,
+              ),
+              CustomClickableArticle(
+                date: '16 Mar 2022',
+                articleName: 'How not to solve HackerRank problems',
+                articlePath: '/solvenot',
+                fontSize: 15,
+              ),
+              CustomClickableArticle(
+                date: '27 Jan 2022',
+                articleName: 'Hunt for O(1) search',
+                articlePath: '/hunt',
+                fontSize: 15,
+              ),
+            ],
+          ),
           const CustomDateText(
             date: '2021',
             fontSize: 18,
           ),
-          const CustomClickableArticle(
-            date: '20 Nov 2021',
-            articleName: 'An old-fashioned library (bookcase)',
-            articlePath: '/bookcase',
-            fontSize: 15,
-          ),
-          const CustomClickableArticle(
-            date: '01 Sep 2021',
-            articleName: 'From binary tree to exponential search',
-            articlePath: '/binarytree',
-            fontSize: 15,
+          const Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              CustomClickableArticle(
+                date: '20 Nov 2021',
+                articleName: 'An old-fashioned library (bookcase)',
+                articlePath: '/bookcase',
+                fontSize: 15,
+              ),
+              CustomClickableArticle(
+                date: '01 Sep 2021',
+                articleName: 'From binary tree to exponential search',
+                articlePath: '/binarytree',
+                fontSize: 15,
+              ),
+            ],
           ),
           SizedBox(
             height: 12.h,
