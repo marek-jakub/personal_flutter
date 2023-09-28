@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:provider/provider.dart';
-//import 'package:markup_text/markup_text.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../../../models/models.dart';
@@ -87,7 +86,6 @@ class _BinaryTreeArticleState extends State<BinaryTreeArticle> {
             styleSheet: MarkdownStyleSheet(
               p: const TextStyle(
                 fontSize: 12,
-                fontWeight: FontWeight.normal,
               ),
               textAlign: WrapAlignment.spaceEvenly,
             ),
@@ -121,7 +119,6 @@ class _BinaryTreeArticleState extends State<BinaryTreeArticle> {
             styleSheet: MarkdownStyleSheet(
               p: const TextStyle(
                 fontSize: 14,
-                fontWeight: FontWeight.normal,
               ),
               textAlign: WrapAlignment.spaceEvenly,
             ),
@@ -157,7 +154,6 @@ class _BinaryTreeArticleState extends State<BinaryTreeArticle> {
             styleSheet: MarkdownStyleSheet(
               p: const TextStyle(
                 fontSize: 14,
-                fontWeight: FontWeight.normal,
               ),
               textAlign: WrapAlignment.spaceEvenly,
             ),
