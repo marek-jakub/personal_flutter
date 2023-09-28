@@ -6,88 +6,158 @@ import 'package:google_fonts/google_fonts.dart';
 /// Two definitions, light and dark mode.
 class MonitoRingTheme {
   static TextTheme lightTextTheme = TextTheme(
-    bodyLarge: GoogleFonts.openSans(
-      fontSize: 14.0,
+    displayLarge: GoogleFonts.openSans(
+      fontSize: 18,
+      fontWeight: FontWeight.normal,
+      color: Colors.black,
+    ),
+    displayMedium: GoogleFonts.openSans(
+      fontSize: 16,
       fontWeight: FontWeight.w700,
       color: Colors.black,
     ),
-    bodyMedium: GoogleFonts.openSans(
-      fontSize: 14.0,
-      fontWeight: FontWeight.w700,
-      color: Colors.black,
-    ),
-    bodySmall: GoogleFonts.openSans(
-      fontSize: 14.0,
-      fontWeight: FontWeight.w700,
+    displaySmall: GoogleFonts.openSans(
+      fontSize: 12,
+      fontWeight: FontWeight.w600,
       color: Colors.black,
     ),
     headlineLarge: GoogleFonts.openSans(
-      fontSize: 32.0,
+      fontSize: 18.0,
       fontWeight: FontWeight.bold,
       color: Colors.black,
     ),
     headlineMedium: GoogleFonts.openSans(
-      fontSize: 21.0,
+      fontSize: 16.0,
       fontWeight: FontWeight.w700,
       color: Colors.black,
     ),
     headlineSmall: GoogleFonts.openSans(
-      fontSize: 16.0,
+      fontSize: 14.0,
+      fontWeight: FontWeight.w600,
+      color: Colors.black,
+    ),
+    titleLarge: GoogleFonts.openSans(
+      fontSize: 18.0,
       fontWeight: FontWeight.w600,
       color: Colors.black,
     ),
     titleMedium: GoogleFonts.openSans(
-      fontSize: 20.0,
+      fontSize: 16.0,
       fontWeight: FontWeight.w600,
       color: Colors.black,
     ),
     titleSmall: GoogleFonts.openSans(
       fontSize: 14.0,
+      fontWeight: FontWeight.w600,
+      color: Colors.black,
+    ),
+    labelLarge: GoogleFonts.openSans(
+      fontSize: 14,
+      fontWeight: FontWeight.normal,
+      color: Colors.black,
+    ),
+    labelMedium: GoogleFonts.openSans(
+      fontSize: 14,
+      fontWeight: FontWeight.normal,
+      color: Colors.black,
+    ),
+    labelSmall: GoogleFonts.openSans(
+      fontSize: 12,
+      fontWeight: FontWeight.normal,
+      color: Colors.black,
+    ),
+    bodyLarge: GoogleFonts.openSans(
+      fontSize: 16.0,
+      fontWeight: FontWeight.w600,
+      color: Colors.black,
+    ),
+    bodyMedium: GoogleFonts.openSans(
+      fontSize: 14.0,
+      fontWeight: FontWeight.w600,
+      color: Colors.black,
+    ),
+    bodySmall: GoogleFonts.openSans(
+      fontSize: 12.0,
       fontWeight: FontWeight.w600,
       color: Colors.black,
     ),
   );
 
   static TextTheme darkTextTheme = TextTheme(
-    bodyLarge: GoogleFonts.openSans(
-      fontSize: 14.0,
-      fontWeight: FontWeight.w700,
-      color: Colors.white,
+    displayLarge: GoogleFonts.openSans(
+      fontSize: 18,
+      fontWeight: FontWeight.normal,
+      color: Colors.grey[400],
     ),
-    bodyMedium: GoogleFonts.openSans(
-      fontSize: 14.0,
+    displayMedium: GoogleFonts.openSans(
+      fontSize: 16,
       fontWeight: FontWeight.w700,
-      color: Colors.white,
+      color: Colors.grey[400],
     ),
-    bodySmall: GoogleFonts.openSans(
-      fontSize: 14.0,
-      fontWeight: FontWeight.w700,
-      color: Colors.white,
+    displaySmall: GoogleFonts.openSans(
+      fontSize: 12,
+      fontWeight: FontWeight.w600,
+      color: Colors.grey[400],
     ),
     headlineLarge: GoogleFonts.openSans(
-      fontSize: 32.0,
+      fontSize: 18.0,
       fontWeight: FontWeight.bold,
-      color: Colors.white,
+      color: Colors.grey[400],
     ),
     headlineMedium: GoogleFonts.openSans(
-      fontSize: 21.0,
+      fontSize: 16.0,
       fontWeight: FontWeight.w700,
-      color: Colors.white,
+      color: Colors.grey[400],
     ),
     headlineSmall: GoogleFonts.openSans(
-      fontSize: 16.0,
+      fontSize: 14.0,
       fontWeight: FontWeight.w600,
-      color: Colors.white,
+      color: Colors.grey[400],
+    ),
+    titleLarge: GoogleFonts.openSans(
+      fontSize: 18.0,
+      fontWeight: FontWeight.w600,
+      color: Colors.grey[400],
     ),
     titleMedium: GoogleFonts.openSans(
-      fontSize: 20.0,
+      fontSize: 16.0,
       fontWeight: FontWeight.w600,
-      color: Colors.white,
+      color: Colors.grey[400],
     ),
     titleSmall: GoogleFonts.openSans(
       fontSize: 14.0,
       fontWeight: FontWeight.w600,
-      color: Colors.white,
+      color: Colors.grey[400],
+    ),
+    labelLarge: GoogleFonts.openSans(
+      fontSize: 14,
+      fontWeight: FontWeight.normal,
+      color: Colors.grey[400],
+    ),
+    labelMedium: GoogleFonts.openSans(
+      fontSize: 14,
+      fontWeight: FontWeight.normal,
+      color: Colors.grey[400],
+    ),
+    labelSmall: GoogleFonts.openSans(
+      fontSize: 12,
+      fontWeight: FontWeight.normal,
+      color: Colors.grey[400],
+    ),
+    bodyLarge: GoogleFonts.openSans(
+      fontSize: 16.0,
+      fontWeight: FontWeight.w600,
+      color: Colors.grey[400],
+    ),
+    bodyMedium: GoogleFonts.openSans(
+      fontSize: 14.0,
+      fontWeight: FontWeight.w600,
+      color: Colors.grey[400],
+    ),
+    bodySmall: GoogleFonts.openSans(
+      fontSize: 12.0,
+      fontWeight: FontWeight.w600,
+      color: Colors.grey[400],
     ),
   );
 
