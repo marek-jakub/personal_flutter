@@ -134,8 +134,8 @@ class _AboutScreenState extends State<AboutScreen> {
               const Image(
                 fit: BoxFit.scaleDown,
                 image: AssetImage('assets/images/MJ_small.jpg'),
-                // width: 360,
-                // height: 270,
+                width: 400,
+                height: 310,
               ),
               Padding(
                 padding: const EdgeInsets.fromLTRB(15, 5, 15, 10),
