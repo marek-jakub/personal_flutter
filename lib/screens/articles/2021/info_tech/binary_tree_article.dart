@@ -90,9 +90,6 @@ class _BinaryTreeArticleState extends State<BinaryTreeArticle> {
               textAlign: WrapAlignment.spaceEvenly,
             ),
             imageBuilder: (uri, title, alt) {
-              // return Image.asset(
-              //   uri.toString(),
-              // );
               return Center(
                 child: Image.asset(uri.toString()),
               );
@@ -126,9 +123,6 @@ class _BinaryTreeArticleState extends State<BinaryTreeArticle> {
               return Center(
                 child: Image.asset(uri.toString()),
               );
-              // return Image.asset(
-              //   uri.toString(),
-              // );
             },
           ),
           SizedBox(
@@ -161,9 +155,6 @@ class _BinaryTreeArticleState extends State<BinaryTreeArticle> {
               return Center(
                 child: Image.asset(uri.toString()),
               );
-              // return Image.asset(
-              //   uri.toString(),
-              // );
             },
           ),
           SizedBox(
