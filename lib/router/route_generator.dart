@@ -20,6 +20,10 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const WelcomeScreen());
       case '/binarytree':
         return MaterialPageRoute(builder: (_) => const BinaryTreeArticle());
+      case '/bookcase':
+        return MaterialPageRoute(builder: (_) => const BookcaseArticle());
+      case '/hunt':
+        return MaterialPageRoute(builder: (_) => const OoneSearchArticle());
       default:
         return _errorRoute();
     }
