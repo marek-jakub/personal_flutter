@@ -168,7 +168,7 @@ class _BinaryTreeArticleState extends State<BinaryTreeArticle> {
 
   Future<String> getArticle() async {
     final String article = await rootBundle
-        .loadString('assets/articles/2021/article_01Sep2021.md');
+        .loadString('assets/articles/2021/01_article/article_01Sep2021.md');
     return article;
   }
 }
