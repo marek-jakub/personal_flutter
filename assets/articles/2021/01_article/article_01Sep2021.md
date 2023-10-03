@@ -1,4 +1,4 @@
-# From binary tree to exponential search
+## From binary tree to exponential search
 
 2021-09-01
 
