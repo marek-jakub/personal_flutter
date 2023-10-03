@@ -24,6 +24,10 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const BookcaseArticle());
       case '/hunt':
         return MaterialPageRoute(builder: (_) => const OoneSearchArticle());
+      case '/solvenot':
+        return MaterialPageRoute(builder: (_) => const HrankProblemArticle());
+      case '/traversal':
+        return MaterialPageRoute(builder: (_) => const TraversalArticle());
       default:
         return _errorRoute();
     }
