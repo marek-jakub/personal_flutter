@@ -1,4 +1,4 @@
-# Hunt for O(1) search
+## Hunt for O(1) search
 
 2022-01-27
 
