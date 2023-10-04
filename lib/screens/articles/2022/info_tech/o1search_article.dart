@@ -26,7 +26,6 @@ class _OoneSearchArticleState extends State<OoneSearchArticle> {
           appBar: AppBar(
             title: const Text('Marek Jakub'),
             automaticallyImplyLeading: false,
-            centerTitle: true,
             actions: [
               const Icon(Icons.light_mode),
               Switch(
@@ -35,9 +34,7 @@ class _OoneSearchArticleState extends State<OoneSearchArticle> {
                   stateManager.setDarkMode = value;
                 },
               ),
-              const Padding(
-                  padding: EdgeInsets.fromLTRB(0, 0, 70, 0),
-                  child: Icon(Icons.dark_mode)),
+              const Icon(Icons.dark_mode),
             ],
           ),
           body: FutureBuilder<String>(
