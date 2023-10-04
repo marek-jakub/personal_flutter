@@ -18,7 +18,7 @@ In-order traversal starts at the root, which sits at depth 1. It checks the root
 
 In search of a solution it is important to look for patterns (or regular occurrences). Having defined the structure and desired movement through that structure for in-order traversal, characteristics of that movement were still missing. In such situations, modelling helps. Using simple models (paper sketches), it was found that if a position of the visited node at the current level of the tree is determined (starting from left and counting from 1), then positions of its children can easily be calculated, i.e. that there exists a pattern, as given in the Figure 2:
 
-![Movement](assets/articles/2022/03_article/01_lists.png "Binary tree-like movement")
+![Movement](assets/articles/2022/03_article/02_lists_travel.png "Binary tree-like movement")
 
 _Figure 2: A description of a binary tree-like movement in nested list structure, through nodes 1-3-6-12._
 
