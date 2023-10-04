@@ -24,7 +24,6 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
           appBar: AppBar(
             title: const Text('Marek Jakub'),
             automaticallyImplyLeading: false,
-            centerTitle: true,
             actions: [
               const Icon(Icons.light_mode),
               Switch(
@@ -33,9 +32,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   stateManager.setDarkMode = value;
                 },
               ),
-              const Padding(
-                  padding: EdgeInsets.fromLTRB(0, 0, 70, 0),
-                  child: Icon(Icons.dark_mode)),
+              const Icon(Icons.dark_mode),
             ],
           ),
           body: Container(
