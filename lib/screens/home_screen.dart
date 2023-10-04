@@ -15,7 +15,6 @@ class _HomeScreenState extends State<HomeScreen> {
   final pages = [
     const WelcomeScreen(),
     const ArticlesScreen(),
-    const PhotosScreen(),
     const AboutScreen(),
   ];
 
