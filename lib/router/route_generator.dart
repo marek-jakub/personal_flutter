@@ -14,8 +14,6 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const AboutScreen());
       case '/articles':
         return MaterialPageRoute(builder: (_) => const ArticlesScreen());
-      case '/photos':
-        return MaterialPageRoute(builder: (_) => const PhotosScreen());
       case '/welcome':
         return MaterialPageRoute(builder: (_) => const WelcomeScreen());
       case '/binarytree':
