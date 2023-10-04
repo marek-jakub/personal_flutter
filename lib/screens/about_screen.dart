@@ -23,7 +23,6 @@ class _AboutScreenState extends State<AboutScreen> {
         appBar: AppBar(
           title: const Text('Marek Jakub: About'),
           automaticallyImplyLeading: false,
-          centerTitle: true,
           actions: [
             const Icon(Icons.light_mode),
             Switch(
@@ -32,9 +31,7 @@ class _AboutScreenState extends State<AboutScreen> {
                 stateManager.setDarkMode = value;
               },
             ),
-            Padding(
-                padding: EdgeInsets.fromLTRB(0, 0, 7.w, 0),
-                child: const Icon(Icons.dark_mode)),
+            const Icon(Icons.dark_mode),
           ],
         ),
         body: Container(
