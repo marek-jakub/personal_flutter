@@ -24,7 +24,6 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
           appBar: AppBar(
             title: const Text('Marek Jakub: Articles'),
             automaticallyImplyLeading: false,
-            centerTitle: true,
             actions: [
               const Icon(Icons.light_mode),
               Switch(
@@ -33,9 +32,7 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
                   stateManager.setDarkMode = value;
                 },
               ),
-              const Padding(
-                  padding: EdgeInsets.fromLTRB(0, 0, 70, 0),
-                  child: Icon(Icons.dark_mode)),
+              const Icon(Icons.dark_mode),
             ],
           ),
           body: Container(
@@ -59,14 +56,6 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
       child: Column(
         children: <Widget>[
           const CustomNavButtons(),
-          const CustomDateText(
-            date: '2023',
-            fontSize: 15,
-          ),
-          const CustomDateText(
-            date: '2022',
-            fontSize: 15,
-          ),
           const Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -89,10 +78,6 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
                 fontSize: 12,
               ),
             ],
-          ),
-          const CustomDateText(
-            date: '2021',
-            fontSize: 15,
           ),
           const Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -126,14 +111,6 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
       child: Column(
         children: <Widget>[
           const CustomNavButtons(),
-          const CustomDateText(
-            date: '2023',
-            fontSize: 17,
-          ),
-          const CustomDateText(
-            date: '2022',
-            fontSize: 17,
-          ),
           const Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -156,10 +133,6 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
                 fontSize: 14,
               ),
             ],
-          ),
-          const CustomDateText(
-            date: '2021',
-            fontSize: 17,
           ),
           const Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -193,14 +166,6 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
       child: Column(
         children: <Widget>[
           const CustomNavButtons(),
-          const CustomDateText(
-            date: '2023',
-            fontSize: 18,
-          ),
-          const CustomDateText(
-            date: '2022',
-            fontSize: 18,
-          ),
           const Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -223,10 +188,6 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
                 fontSize: 15,
               ),
             ],
-          ),
-          const CustomDateText(
-            date: '2021',
-            fontSize: 18,
           ),
           const Column(
             crossAxisAlignment: CrossAxisAlignment.start,
