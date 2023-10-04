@@ -51,12 +51,12 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
   }
 
   Widget smallScreenLayout() {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
+    return const Padding(
+      padding: EdgeInsets.all(8.0),
       child: Column(
         children: <Widget>[
-          const CustomNavButtons(),
-          const Column(
+          CustomNavButtons(),
+          Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               CustomClickableArticle(
@@ -77,11 +77,6 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
                 articlePath: '/hunt',
                 fontSize: 12,
               ),
-            ],
-          ),
-          const Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
               CustomClickableArticle(
                 date: '20 Nov 2021',
                 articleName: 'An old-fashioned library (bookcase)',
@@ -96,22 +91,19 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
               ),
             ],
           ),
-          SizedBox(
-            height: 12.h,
-          ),
-          const CustomConnectText(),
+          CustomConnectText(),
         ],
       ),
     );
   }
 
   Widget mediumScreenLayout() {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
+    return const Padding(
+      padding: EdgeInsets.all(8.0),
       child: Column(
         children: <Widget>[
-          const CustomNavButtons(),
-          const Column(
+          CustomNavButtons(),
+          Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               CustomClickableArticle(
@@ -132,11 +124,6 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
                 articlePath: '/hunt',
                 fontSize: 14,
               ),
-            ],
-          ),
-          const Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
               CustomClickableArticle(
                 date: '20 Nov 2021',
                 articleName: 'An old-fashioned library (bookcase)',
@@ -151,22 +138,19 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
               ),
             ],
           ),
-          SizedBox(
-            height: 12.h,
-          ),
-          const CustomConnectText(),
+          CustomConnectText(),
         ],
       ),
     );
   }
 
   Widget largeScreenLayout() {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
+    return const Padding(
+      padding: EdgeInsets.all(8.0),
       child: Column(
         children: <Widget>[
-          const CustomNavButtons(),
-          const Column(
+          CustomNavButtons(),
+          Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               CustomClickableArticle(
@@ -187,11 +171,6 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
                 articlePath: '/hunt',
                 fontSize: 15,
               ),
-            ],
-          ),
-          const Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
               CustomClickableArticle(
                 date: '20 Nov 2021',
                 articleName: 'An old-fashioned library (bookcase)',
@@ -206,10 +185,7 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
               ),
             ],
           ),
-          SizedBox(
-            height: 12.h,
-          ),
-          const CustomConnectText(),
+          CustomConnectText(),
         ],
       ),
     );
