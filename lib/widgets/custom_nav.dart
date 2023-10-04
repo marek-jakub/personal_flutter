@@ -42,15 +42,6 @@ Widget smallScreenLayout(BuildContext context) {
           padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
           child: ElevatedButton(
             onPressed: () {
-              Navigator.pushNamed(context, '/photos');
-            },
-            child: const Text('Photo of the Month'),
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
-          child: ElevatedButton(
-            onPressed: () {
               Navigator.pushNamed(context, '/about');
             },
             child: const Text('About'),
@@ -83,15 +74,6 @@ Widget mediumAndLargeScreenLayout(BuildContext context) {
               Navigator.pushNamed(context, '/articles');
             },
             child: const Text('Articles'),
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
-          child: ElevatedButton(
-            onPressed: () {
-              Navigator.pushNamed(context, '/photos');
-            },
-            child: const Text('Photo of the Month'),
           ),
         ),
         Padding(
