@@ -25,7 +25,7 @@ class _AboutScreenState extends State<AboutScreen> {
             padding: EdgeInsets.all(5.0),
             child: Image(
               fit: BoxFit.scaleDown,
-              image: AssetImage('assets/images/01_logo.png'),
+              image: AssetImage('assets/images/02_logo.png'),
             ),
           ),
           title: const Text('Marek Jakub: About'),
