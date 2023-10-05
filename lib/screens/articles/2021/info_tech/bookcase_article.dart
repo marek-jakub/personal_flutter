@@ -76,7 +76,6 @@ class _BookcaseArticleState extends State<BookcaseArticle> {
       padding: const EdgeInsets.all(8.0),
       child: Column(
         children: <Widget>[
-          const CustomNavButtons(),
           Markdown(
             data: article ?? '',
             shrinkWrap: true,
@@ -106,7 +105,6 @@ class _BookcaseArticleState extends State<BookcaseArticle> {
       padding: EdgeInsets.fromLTRB(5.w, 8, 5.w, 8),
       child: Column(
         children: <Widget>[
-          const CustomNavButtons(),
           Markdown(
             data: article ?? '',
             shrinkWrap: true,
@@ -136,7 +134,6 @@ class _BookcaseArticleState extends State<BookcaseArticle> {
       padding: EdgeInsets.fromLTRB(20.w, 8, 20.w, 8),
       child: Column(
         children: <Widget>[
-          const CustomNavButtons(),
           // If there is scrollable parent, use MarkdownBody
           // instead of shrinkwrap: true.
           Markdown(
