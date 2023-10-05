@@ -21,6 +21,13 @@ class _AboutScreenState extends State<AboutScreen> {
     return Consumer<StateManager>(builder: (context, stateManager, child) {
       return Scaffold(
         appBar: AppBar(
+          leading: const Padding(
+            padding: EdgeInsets.all(5.0),
+            child: Image(
+              fit: BoxFit.scaleDown,
+              image: AssetImage('assets/images/01_logo.png'),
+            ),
+          ),
           title: const Text('Marek Jakub: About'),
           automaticallyImplyLeading: false,
           actions: [
