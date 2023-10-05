@@ -28,7 +28,6 @@ class _AboutScreenState extends State<AboutScreen> {
               image: AssetImage('assets/images/02_logo.png'),
             ),
           ),
-          title: const Text('Marek Jakub: About'),
           automaticallyImplyLeading: false,
           actions: [
             const Icon(Icons.light_mode),
@@ -60,7 +59,6 @@ class _AboutScreenState extends State<AboutScreen> {
       padding: const EdgeInsets.all(8.0),
       child: Column(
         children: <Widget>[
-          const CustomNavButtons(),
           const Image(
             fit: BoxFit.scaleDown,
             image: AssetImage('assets/images/MJ_small.jpg'),
@@ -92,7 +90,6 @@ class _AboutScreenState extends State<AboutScreen> {
       padding: const EdgeInsets.all(8.0),
       child: Column(
         children: <Widget>[
-          const CustomNavButtons(),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -130,7 +127,6 @@ class _AboutScreenState extends State<AboutScreen> {
       padding: const EdgeInsets.all(8.0),
       child: Column(
         children: <Widget>[
-          const CustomNavButtons(),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
