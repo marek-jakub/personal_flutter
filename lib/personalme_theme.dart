@@ -187,7 +187,7 @@ class MonitoRingTheme {
         titleTextStyle: const TextStyle(fontSize: 14.0, color: Colors.black),
         centerTitle: true,
         foregroundColor: Colors.grey[800],
-        backgroundColor: Colors.white,
+        backgroundColor: Color.fromARGB(255, 124, 143, 145),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ButtonStyle(
@@ -244,7 +244,7 @@ class MonitoRingTheme {
         titleTextStyle: const TextStyle(fontSize: 14.0, color: Colors.white),
         centerTitle: true,
         foregroundColor: Colors.white,
-        backgroundColor: Colors.grey[800],
+        backgroundColor: const Color.fromARGB(255, 63, 60, 60),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ButtonStyle(
