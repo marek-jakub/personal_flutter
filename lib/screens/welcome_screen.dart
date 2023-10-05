@@ -22,9 +22,9 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
       builder: (context, stateManager, child) {
         return Scaffold(
           appBar: AppBar(
-            title: const Text('Marek Jakub'),
             automaticallyImplyLeading: false,
             actions: [
+              const CustomNavigation(),
               const Icon(Icons.light_mode),
               Switch(
                 value: stateManager.darkMode,
@@ -54,9 +54,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     return const Padding(
       padding: EdgeInsets.all(8.0),
       child: Column(
-        children: <Widget>[
-          CustomNavButtons(),
-        ],
+        children: <Widget>[],
       ),
     );
   }
@@ -64,7 +62,6 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   Widget mediumScreenLayout() {
     return const Column(
       children: [
-        CustomNavButtons(),
         Text('medium screen layout'),
       ],
     );
@@ -73,7 +70,6 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   Widget largeScreenLayout() {
     return const Column(
       children: [
-        CustomNavButtons(),
         Text('large screen layout'),
       ],
     );
