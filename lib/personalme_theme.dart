@@ -187,10 +187,12 @@ class MonitoRingTheme {
         titleTextStyle: const TextStyle(fontSize: 14.0, color: Colors.black),
         centerTitle: true,
         foregroundColor: Colors.grey[800],
-        backgroundColor: Color.fromARGB(255, 124, 143, 145),
+        backgroundColor: const Color.fromARGB(255, 124, 143, 145),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ButtonStyle(
+          backgroundColor: MaterialStateProperty.all(
+              const Color.fromARGB(255, 124, 143, 145)),
           minimumSize: MaterialStateProperty.all(
             const Size(165, 40),
           ),
@@ -240,11 +242,11 @@ class MonitoRingTheme {
       brightness: Brightness.dark,
       primarySwatch: customDarkSwatch,
       scaffoldBackgroundColor: Colors.grey[800],
-      appBarTheme: AppBarTheme(
-        titleTextStyle: const TextStyle(fontSize: 14.0, color: Colors.white),
+      appBarTheme: const AppBarTheme(
+        titleTextStyle: TextStyle(fontSize: 14.0, color: Colors.white),
         centerTitle: true,
         foregroundColor: Colors.white,
-        backgroundColor: const Color.fromARGB(255, 63, 60, 60),
+        backgroundColor: Color.fromARGB(255, 63, 60, 60),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ButtonStyle(
