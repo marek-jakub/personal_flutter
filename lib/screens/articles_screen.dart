@@ -55,7 +55,6 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
       padding: EdgeInsets.all(8.0),
       child: Column(
         children: <Widget>[
-          CustomNavButtons(),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -102,7 +101,6 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
       padding: EdgeInsets.all(8.0),
       child: Column(
         children: <Widget>[
-          CustomNavButtons(),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -149,7 +147,6 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
       padding: EdgeInsets.all(8.0),
       child: Column(
         children: <Widget>[
-          CustomNavButtons(),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
