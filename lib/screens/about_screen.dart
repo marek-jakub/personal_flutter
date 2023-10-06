@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:markup_text/markup_text.dart';
-import 'package:sizer/sizer.dart';
+//import 'package:sizer/sizer.dart';
+import 'package:flutter_sizer/flutter_sizer.dart';
 
 import '../models/models.dart';
 import '../widgets/widgets.dart';
@@ -20,25 +21,9 @@ class _AboutScreenState extends State<AboutScreen> {
 
     return Consumer<StateManager>(builder: (context, stateManager, child) {
       return Scaffold(
-        appBar: AppBar(
-          leading: const Padding(
-            padding: EdgeInsets.all(5.0),
-            child: Image(
-              fit: BoxFit.scaleDown,
-              image: AssetImage('assets/images/02_logo.png'),
-            ),
-          ),
-          automaticallyImplyLeading: false,
-          actions: [
-            const Icon(Icons.light_mode),
-            Switch(
-              value: stateManager.darkMode,
-              onChanged: (value) {
-                stateManager.setDarkMode = value;
-              },
-            ),
-            const Icon(Icons.dark_mode),
-          ],
+        appBar: const PreferredSize(
+          preferredSize: Size.fromHeight(60.0),
+          child: CustomAppBar(),
         ),
         body: Container(
           alignment: Alignment.topCenter,
@@ -76,10 +61,6 @@ class _AboutScreenState extends State<AboutScreen> {
               ),
             ),
           ),
-          SizedBox(
-            height: 12.h,
-          ),
-          const CustomConnectText(),
         ],
       ),
     );
@@ -104,7 +85,7 @@ class _AboutScreenState extends State<AboutScreen> {
                 padding: const EdgeInsets.fromLTRB(15, 5, 15, 10),
                 child: SizedBox(
                   width: 25.w,
-                  height: 30.h,
+                  height: 35.h,
                   child: MarkupText(
                     getMarkupText(),
                     textAlign: TextAlign.justify,
@@ -113,10 +94,6 @@ class _AboutScreenState extends State<AboutScreen> {
               ),
             ],
           ),
-          SizedBox(
-            height: 30.h,
-          ),
-          const CustomConnectText(),
         ],
       ),
     );
@@ -150,10 +127,6 @@ class _AboutScreenState extends State<AboutScreen> {
               ),
             ],
           ),
-          SizedBox(
-            height: 20.h,
-          ),
-          const CustomConnectText(),
         ],
       ),
     );
