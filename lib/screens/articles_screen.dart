@@ -1,7 +1,7 @@
 //import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:sizer/sizer.dart';
+//import 'package:sizer/sizer.dart';
 
 import '../models/models.dart';
 import '../widgets/widgets.dart';
@@ -21,19 +21,9 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
     return Consumer<StateManager>(
       builder: (context, stateManager, child) {
         return Scaffold(
-          appBar: AppBar(
-            title: const Text('Marek Jakub: Articles'),
-            automaticallyImplyLeading: false,
-            actions: [
-              const Icon(Icons.light_mode),
-              Switch(
-                value: stateManager.darkMode,
-                onChanged: (value) {
-                  stateManager.setDarkMode = value;
-                },
-              ),
-              const Icon(Icons.dark_mode),
-            ],
+          appBar: const PreferredSize(
+            preferredSize: Size.fromHeight(60.0),
+            child: CustomAppBar(),
           ),
           body: Container(
             alignment: Alignment.topCenter,
@@ -90,7 +80,6 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
               ),
             ],
           ),
-          CustomConnectText(),
         ],
       ),
     );
@@ -136,7 +125,6 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
               ),
             ],
           ),
-          CustomConnectText(),
         ],
       ),
     );
@@ -182,7 +170,6 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
               ),
             ],
           ),
-          CustomConnectText(),
         ],
       ),
     );
