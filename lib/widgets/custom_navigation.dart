@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:icons_flutter/icons_flutter.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 /// Website navigation buttons.
 class CustomNavigation extends StatefulWidget {
@@ -40,15 +41,21 @@ Widget smallScreenLayout(BuildContext context) {
       ),
       MenuItemButton(
         child: const Icon(Icons.email),
-        onPressed: () {},
+        onPressed: () {
+          _launchMailUrl();
+        },
       ),
       MenuItemButton(
         child: const Icon(Brandico.github_1),
-        onPressed: () {},
+        onPressed: () {
+          _launchGitHubUrl();
+        },
       ),
       MenuItemButton(
         child: const Icon(Brandico.linkedin_1),
-        onPressed: () {},
+        onPressed: () {
+          _launchLinkedInUrl();
+        },
       ),
     ],
     builder: (context, controller, child) {
@@ -103,21 +110,27 @@ Widget mediumScreenLayout(BuildContext context) {
           padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
           child: GestureDetector(
             child: const Icon(Icons.email),
-            onTap: () {},
+            onTap: () {
+              _launchMailUrl();
+            },
           ),
         ),
         Padding(
           padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
           child: GestureDetector(
             child: const Icon(Brandico.github_1),
-            onTap: () {},
+            onTap: () {
+              _launchGitHubUrl();
+            },
           ),
         ),
         Padding(
           padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
           child: GestureDetector(
             child: const Icon(Brandico.linkedin_1),
-            onTap: () {},
+            onTap: () {
+              _launchLinkedInUrl();
+            },
           ),
         ),
       ],
@@ -162,24 +175,51 @@ Widget largeScreenLayout(BuildContext context) {
           padding: const EdgeInsets.fromLTRB(0, 0, 40, 0),
           child: GestureDetector(
             child: const Icon(Icons.email),
-            onTap: () {},
+            onTap: () {
+              _launchMailUrl();
+            },
           ),
         ),
         Padding(
           padding: const EdgeInsets.fromLTRB(0, 0, 40, 0),
           child: GestureDetector(
             child: const Icon(Brandico.github_1),
-            onTap: () {},
+            onTap: () {
+              _launchGitHubUrl();
+            },
           ),
         ),
         Padding(
           padding: const EdgeInsets.fromLTRB(0, 0, 40, 0),
           child: GestureDetector(
             child: const Icon(Brandico.linkedin_1),
-            onTap: () {},
+            onTap: () {
+              _launchLinkedInUrl();
+            },
           ),
         ),
       ],
     ),
   );
+}
+
+_launchMailUrl() async {
+  String url = 'mailto:mj3935538@gmail.com';
+  if (await canLaunchUrlString(url)) {
+    await launchUrlString(url);
+  }
+}
+
+_launchGitHubUrl() async {
+  String url = 'https://github.com/marek-jakub';
+  if (await canLaunchUrlString(url)) {
+    await launchUrlString(url);
+  }
+}
+
+_launchLinkedInUrl() async {
+  String url = 'https://linkedin.com/in/marek-jakub-he-him-his-2a7502227';
+  if (await canLaunchUrlString(url)) {
+    await launchUrlString(url);
+  }
 }
