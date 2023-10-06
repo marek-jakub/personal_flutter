@@ -21,19 +21,9 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     return Consumer<StateManager>(
       builder: (context, stateManager, child) {
         return Scaffold(
-          appBar: AppBar(
-            automaticallyImplyLeading: false,
-            actions: [
-              const CustomNavigation(),
-              const Icon(Icons.light_mode),
-              Switch(
-                value: stateManager.darkMode,
-                onChanged: (value) {
-                  stateManager.setDarkMode = value;
-                },
-              ),
-              const Icon(Icons.dark_mode),
-            ],
+          appBar: const PreferredSize(
+            preferredSize: Size.fromHeight(60.0),
+            child: CustomAppBar(),
           ),
           body: Container(
             alignment: Alignment.topCenter,
@@ -54,7 +44,9 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     return const Padding(
       padding: EdgeInsets.all(8.0),
       child: Column(
-        children: <Widget>[],
+        children: <Widget>[
+          Text('small screen layout'),
+        ],
       ),
     );
   }
