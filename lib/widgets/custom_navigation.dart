@@ -2,89 +2,182 @@ import 'package:flutter/material.dart';
 import 'package:icons_flutter/icons_flutter.dart';
 
 /// Website navigation buttons.
-class CustomNavigation extends StatelessWidget {
+class CustomNavigation extends StatefulWidget {
   const CustomNavigation({
     Key? key,
   }) : super(key: key);
 
   @override
+  State<CustomNavigation> createState() => _CustomNavigationState();
+}
+
+class _CustomNavigationState extends State<CustomNavigation> {
+  @override
   Widget build(BuildContext context) {
     final double screenWidth = MediaQuery.of(context).size.width;
-    return screenWidth < 700
+    return screenWidth < 900
         ? smallScreenLayout(context)
-        : mediumAndLargeScreenLayout(context);
+        : screenWidth < 1400
+            ? mediumScreenLayout(context)
+            : largeScreenLayout(context);
   }
 }
 
 Widget smallScreenLayout(BuildContext context) {
-  return Drawer(
-    child: ListView(
-      padding: EdgeInsets.zero,
+  return MenuAnchor(
+    menuChildren: [
+      MenuItemButton(
+        child: const Text('Home'),
+        onPressed: () => Navigator.pushNamed(context, '/welcome'),
+      ),
+      MenuItemButton(
+        child: const Text('Blog'),
+        onPressed: () => Navigator.pushNamed(context, '/articles'),
+      ),
+      MenuItemButton(
+        child: const Text('About'),
+        onPressed: () => Navigator.pushNamed(context, '/about'),
+      ),
+      MenuItemButton(
+        child: const Icon(Icons.email),
+        onPressed: () {},
+      ),
+      MenuItemButton(
+        child: const Icon(Brandico.github_1),
+        onPressed: () {},
+      ),
+      MenuItemButton(
+        child: const Icon(Brandico.linkedin_1),
+        onPressed: () {},
+      ),
+    ],
+    builder: (context, controller, child) {
+      return TextButton(
+        onPressed: () {
+          if (controller.isOpen) {
+            controller.close();
+          } else {
+            controller.open();
+          }
+        },
+        child: const Icon(Icons.menu),
+      );
+    },
+  );
+}
+
+Widget mediumScreenLayout(BuildContext context) {
+  return Padding(
+    padding: const EdgeInsets.fromLTRB(0, 0, 10, 0),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const DrawerHeader(
-          decoration: BoxDecoration(
-            color: Colors.grey,
+        Padding(
+          padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
+          child: GestureDetector(
+            child: const Text('Home'),
+            onTap: () {
+              Navigator.pushNamed(context, '/welcome');
+            },
           ),
-          child: Text('Menu'),
         ),
-        ListTile(
-          title: const Text('Home'),
-          onTap: () {
-            Navigator.pushNamed(context, '/welcome');
-          },
+        Padding(
+          padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
+          child: GestureDetector(
+            child: const Text('Blog'),
+            onTap: () {
+              Navigator.pushNamed(context, '/articles');
+            },
+          ),
         ),
-        ListTile(
-          title: const Text('Blog'),
-          onTap: () {
-            Navigator.pushNamed(context, '/articles');
-          },
+        Padding(
+          padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
+          child: GestureDetector(
+            child: const Text('About'),
+            onTap: () {
+              Navigator.pushNamed(context, '/about');
+            },
+          ),
         ),
-        ListTile(
-          title: const Text('About'),
-          onTap: () {
-            Navigator.pushNamed(context, '/about');
-          },
+        Padding(
+          padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
+          child: GestureDetector(
+            child: const Icon(Icons.email),
+            onTap: () {},
+          ),
         ),
-        ListTile(
-          title: const Icon(Icons.email),
-          onTap: () {},
+        Padding(
+          padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
+          child: GestureDetector(
+            child: const Icon(Brandico.github_1),
+            onTap: () {},
+          ),
         ),
-        ListTile(
-          title: const Icon(Brandico.github_1),
-          onTap: () {},
-        ),
-        ListTile(
-          title: const Icon(Brandico.linkedin_1),
-          onTap: () {},
+        Padding(
+          padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
+          child: GestureDetector(
+            child: const Icon(Brandico.linkedin_1),
+            onTap: () {},
+          ),
         ),
       ],
     ),
   );
 }
 
-Widget mediumAndLargeScreenLayout(BuildContext context) {
+Widget largeScreenLayout(BuildContext context) {
   return Padding(
-    padding: const EdgeInsets.fromLTRB(0, 0, 0, 25),
+    padding: const EdgeInsets.fromLTRB(0, 0, 50, 0),
     child: Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        GestureDetector(
-          child: Text('Home'),
-          onTap: () {
-            Navigator.pushNamed(context, '/welcome');
-          },
+        Padding(
+          padding: const EdgeInsets.fromLTRB(0, 0, 40, 0),
+          child: GestureDetector(
+            child: const Text('Home'),
+            onTap: () {
+              Navigator.pushNamed(context, '/welcome');
+            },
+          ),
         ),
-        GestureDetector(
-          child: Text('Blog'),
-          onTap: () {
-            Navigator.pushNamed(context, '/articles');
-          },
+        Padding(
+          padding: const EdgeInsets.fromLTRB(0, 0, 40, 0),
+          child: GestureDetector(
+            child: const Text('Blog'),
+            onTap: () {
+              Navigator.pushNamed(context, '/articles');
+            },
+          ),
         ),
-        GestureDetector(
-          child: Text('About'),
-          onTap: () {
-            Navigator.pushNamed(context, '/about');
-          },
+        Padding(
+          padding: const EdgeInsets.fromLTRB(0, 0, 40, 0),
+          child: GestureDetector(
+            child: const Text('About'),
+            onTap: () {
+              Navigator.pushNamed(context, '/about');
+            },
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.fromLTRB(0, 0, 40, 0),
+          child: GestureDetector(
+            child: const Icon(Icons.email),
+            onTap: () {},
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.fromLTRB(0, 0, 40, 0),
+          child: GestureDetector(
+            child: const Icon(Brandico.github_1),
+            onTap: () {},
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.fromLTRB(0, 0, 40, 0),
+          child: GestureDetector(
+            child: const Icon(Brandico.linkedin_1),
+            onTap: () {},
+          ),
         ),
       ],
     ),
