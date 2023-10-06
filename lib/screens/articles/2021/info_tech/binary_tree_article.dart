@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:provider/provider.dart';
-import 'package:sizer/sizer.dart';
+//import 'package:sizer/sizer.dart';
+import 'package:flutter_sizer/flutter_sizer.dart';
 
 import '../../../../models/models.dart';
 import '../../../../widgets/widgets.dart';
@@ -23,19 +24,9 @@ class _BinaryTreeArticleState extends State<BinaryTreeArticle> {
     return Consumer<StateManager>(
       builder: (context, stateManager, child) {
         return Scaffold(
-          appBar: AppBar(
-            title: const Text('Marek Jakub'),
-            automaticallyImplyLeading: false,
-            actions: [
-              const Icon(Icons.light_mode),
-              Switch(
-                value: stateManager.darkMode,
-                onChanged: (value) {
-                  stateManager.setDarkMode = value;
-                },
-              ),
-              const Icon(Icons.dark_mode),
-            ],
+          appBar: const PreferredSize(
+            preferredSize: Size.fromHeight(60.0),
+            child: CustomAppBar(),
           ),
           body: FutureBuilder<String>(
             future: getArticle(),
@@ -91,10 +82,6 @@ class _BinaryTreeArticleState extends State<BinaryTreeArticle> {
               );
             },
           ),
-          SizedBox(
-            height: 12.h,
-          ),
-          const CustomConnectText(),
         ],
       ),
     );
@@ -120,10 +107,6 @@ class _BinaryTreeArticleState extends State<BinaryTreeArticle> {
               );
             },
           ),
-          SizedBox(
-            height: 12.h,
-          ),
-          const CustomConnectText(),
         ],
       ),
     );
@@ -151,10 +134,6 @@ class _BinaryTreeArticleState extends State<BinaryTreeArticle> {
               );
             },
           ),
-          SizedBox(
-            height: 12.h,
-          ),
-          const CustomConnectText(),
         ],
       ),
     );
