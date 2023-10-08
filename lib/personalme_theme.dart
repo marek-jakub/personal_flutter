@@ -192,7 +192,8 @@ class MonitoRingTheme {
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all(
-              const Color.fromARGB(255, 124, 143, 145)),
+            const Color.fromARGB(255, 57, 64, 65),
+          ),
           minimumSize: MaterialStateProperty.all(
             const Size(165, 40),
           ),
@@ -201,6 +202,19 @@ class MonitoRingTheme {
       floatingActionButtonTheme: FloatingActionButtonThemeData(
         foregroundColor: Colors.white,
         backgroundColor: Colors.grey[800],
+      ),
+      textButtonTheme: TextButtonThemeData(
+        style: ButtonStyle(
+          textStyle: const MaterialStatePropertyAll(
+            TextStyle(
+              fontWeight: FontWeight.bold,
+              inherit: false,
+            ),
+          ),
+          foregroundColor: MaterialStatePropertyAll(
+            Colors.grey[800],
+          ),
+        ),
       ),
       cardColor: Colors.grey.shade400,
       cardTheme: const CardTheme(
@@ -245,7 +259,7 @@ class MonitoRingTheme {
       appBarTheme: const AppBarTheme(
         titleTextStyle: TextStyle(fontSize: 14.0, color: Colors.white),
         centerTitle: true,
-        foregroundColor: Colors.white,
+        foregroundColor: Color.fromARGB(255, 176, 178, 179),
         backgroundColor: Color.fromARGB(255, 63, 60, 60),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
@@ -257,7 +271,7 @@ class MonitoRingTheme {
       ),
       floatingActionButtonTheme: const FloatingActionButtonThemeData(
         foregroundColor: Colors.white,
-        backgroundColor: Colors.grey,
+        backgroundColor: Color.fromARGB(255, 73, 71, 71),
       ),
       cardColor: Colors.blueGrey,
       cardTheme: const CardTheme(
