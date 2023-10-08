@@ -75,7 +75,7 @@ Widget smallScreenLayout(BuildContext context) {
 
 Widget mediumScreenLayout(BuildContext context) {
   return Padding(
-    padding: const EdgeInsets.fromLTRB(0, 0, 10, 0),
+    padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
     child: Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -125,7 +125,7 @@ Widget mediumScreenLayout(BuildContext context) {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
+          padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: GestureDetector(
             child: const Icon(Brandico.linkedin_1),
             onTap: () {
@@ -140,7 +140,7 @@ Widget mediumScreenLayout(BuildContext context) {
 
 Widget largeScreenLayout(BuildContext context) {
   return Padding(
-    padding: const EdgeInsets.fromLTRB(0, 0, 50, 0),
+    padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
     child: Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -190,7 +190,7 @@ Widget largeScreenLayout(BuildContext context) {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.fromLTRB(0, 0, 40, 0),
+          padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: GestureDetector(
             child: const Icon(Brandico.linkedin_1),
             onTap: () {
