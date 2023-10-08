@@ -16,9 +16,9 @@ class _CustomNavigationState extends State<CustomNavigation> {
   @override
   Widget build(BuildContext context) {
     final double screenWidth = MediaQuery.of(context).size.width;
-    return screenWidth < 900
+    return screenWidth < 1100
         ? smallScreenLayout(context)
-        : screenWidth < 1400
+        : screenWidth < 1500
             ? mediumScreenLayout(context)
             : largeScreenLayout(context);
   }
@@ -80,57 +80,57 @@ Widget mediumScreenLayout(BuildContext context) {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Padding(
-          padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
-          child: GestureDetector(
-            child: const Text('Home'),
-            onTap: () {
+          padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+          child: TextButton(
+            onPressed: () {
               Navigator.pushNamed(context, '/welcome');
             },
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
-          child: GestureDetector(
-            child: const Text('Blog'),
-            onTap: () {
-              Navigator.pushNamed(context, '/articles');
-            },
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
-          child: GestureDetector(
-            child: const Text('About'),
-            onTap: () {
-              Navigator.pushNamed(context, '/about');
-            },
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
-          child: GestureDetector(
-            child: const Icon(Icons.email),
-            onTap: () {
-              _launchMailUrl();
-            },
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
-          child: GestureDetector(
-            child: const Icon(Brandico.github_1),
-            onTap: () {
-              _launchGitHubUrl();
-            },
+            child: const Text('Home'),
           ),
         ),
         Padding(
           padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-          child: GestureDetector(
-            child: const Icon(Brandico.linkedin_1),
-            onTap: () {
+          child: TextButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/articles');
+            },
+            child: const Text('Blog'),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+          child: TextButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/about');
+            },
+            child: const Text('About'),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+          child: TextButton(
+            onPressed: () {
+              _launchMailUrl();
+            },
+            child: const Icon(Icons.email),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+          child: TextButton(
+            onPressed: () {
+              _launchGitHubUrl();
+            },
+            child: const Icon(Brandico.github_1),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+          child: TextButton(
+            onPressed: () {
               _launchLinkedInUrl();
             },
+            child: const Icon(Brandico.linkedin_1),
           ),
         ),
       ],
@@ -145,57 +145,57 @@ Widget largeScreenLayout(BuildContext context) {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Padding(
-          padding: const EdgeInsets.fromLTRB(0, 0, 40, 0),
-          child: GestureDetector(
-            child: const Text('Home'),
-            onTap: () {
+          padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
+          child: TextButton(
+            onPressed: () {
               Navigator.pushNamed(context, '/welcome');
             },
+            child: const Text('Home'),
           ),
         ),
         Padding(
-          padding: const EdgeInsets.fromLTRB(0, 0, 40, 0),
-          child: GestureDetector(
-            child: const Text('Blog'),
-            onTap: () {
+          padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
+          child: TextButton(
+            onPressed: () {
               Navigator.pushNamed(context, '/articles');
             },
+            child: const Text('Blog'),
           ),
         ),
         Padding(
-          padding: const EdgeInsets.fromLTRB(0, 0, 40, 0),
-          child: GestureDetector(
-            child: const Text('About'),
-            onTap: () {
+          padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
+          child: TextButton(
+            onPressed: () {
               Navigator.pushNamed(context, '/about');
             },
+            child: const Text('About'),
           ),
         ),
         Padding(
-          padding: const EdgeInsets.fromLTRB(0, 0, 40, 0),
-          child: GestureDetector(
-            child: const Icon(Icons.email),
-            onTap: () {
+          padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
+          child: TextButton(
+            onPressed: () {
               _launchMailUrl();
             },
+            child: const Icon(Icons.email),
           ),
         ),
         Padding(
-          padding: const EdgeInsets.fromLTRB(0, 0, 40, 0),
-          child: GestureDetector(
-            child: const Icon(Brandico.github_1),
-            onTap: () {
+          padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
+          child: TextButton(
+            onPressed: () {
               _launchGitHubUrl();
             },
+            child: const Icon(Brandico.github_1),
           ),
         ),
         Padding(
           padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-          child: GestureDetector(
-            child: const Icon(Brandico.linkedin_1),
-            onTap: () {
+          child: TextButton(
+            onPressed: () {
               _launchLinkedInUrl();
             },
+            child: const Icon(Brandico.linkedin_1),
           ),
         ),
       ],
