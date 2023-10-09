@@ -60,10 +60,82 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   }
 
   Widget largeScreenLayout() {
-    return const Column(
-      children: [
-        Text('large screen layout'),
-      ],
+    return Container(
+      width: 1400,
+      alignment: Alignment.center,
+      child: const Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              CustomContainer(
+                  width: 500,
+                  height: 400,
+                  date: '01 Sep 2021',
+                  articleName: 'Article name',
+                  articlePath: 'Article path',
+                  articleText: 'Sljksadf asdlfkj sdlfkja sa;dflk sflk j',
+                  fontSize: 16,
+                  boxColor: Colors.brown),
+              CustomContainer(
+                  width: 500,
+                  height: 400,
+                  date: '01 Sep 2021',
+                  articleName: 'Article name',
+                  articlePath: 'Article path',
+                  articleText: 'Sljksadf asdlfkj sdlfkja sa;dflk sflk j',
+                  fontSize: 16,
+                  boxColor: Colors.brown),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              CustomContainer(
+                  width: 500,
+                  height: 200,
+                  date: '01 Sep 2021',
+                  articleName: 'Article name',
+                  articlePath: 'Article path',
+                  articleText: 'Sljksadf asdlfkj sdlfkja sa;dflk sflk j',
+                  fontSize: 16,
+                  boxColor: Colors.brown),
+              CustomContainer(
+                  width: 500,
+                  height: 300,
+                  date: '01 Sep 2021',
+                  articleName: 'Article name',
+                  articlePath: 'Article path',
+                  articleText: 'Sljksadf asdlfkj sdlfkja sa;dflk sflk j',
+                  fontSize: 16,
+                  boxColor: Colors.brown),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              CustomContainer(
+                  width: 500,
+                  height: 400,
+                  date: '01 Sep 2021',
+                  articleName: 'Article name',
+                  articlePath: 'Article path',
+                  articleText: 'Sljksadf asdlfkj sdlfkja sa;dflk sflk j',
+                  fontSize: 16,
+                  boxColor: Colors.brown),
+              CustomContainer(
+                  width: 500,
+                  height: 200,
+                  date: '01 Sep 2021',
+                  articleName: 'Article name',
+                  articlePath: 'Article path',
+                  articleText: 'Sljksadf asdlfkj sdlfkja sa;dflk sflk j',
+                  fontSize: 16,
+                  boxColor: Colors.brown),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }
