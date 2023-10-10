@@ -1,6 +1,4 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-//import 'package:sizer/sizer.dart';
 
 /// A container with visible sides and text inside.
 class CustomContainer extends StatelessWidget {
@@ -12,6 +10,7 @@ class CustomContainer extends StatelessWidget {
     required String articleName,
     required String articlePath,
     required String articleText,
+    required double titleSize,
     required double fontSize,
     required Color boxColor,
   })  : _width = width,
@@ -20,6 +19,7 @@ class CustomContainer extends StatelessWidget {
         _articleName = articleName,
         _articlePath = articlePath,
         _articleText = articleText,
+        _titleSize = titleSize,
         _fontSize = fontSize,
         _boxColor = boxColor,
         super(key: key);
@@ -30,6 +30,7 @@ class CustomContainer extends StatelessWidget {
   final String _articleName;
   final String _articlePath;
   final String _articleText;
+  final double _titleSize;
   final double _fontSize;
   final Color _boxColor;
 
@@ -50,13 +51,18 @@ class CustomContainer extends StatelessWidget {
           children: [
             Padding(
               padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
-              child: Text(_date),
+              child: Text(
+                _date,
+                style: TextStyle(
+                  fontSize: _fontSize,
+                ),
+              ),
             ),
             Padding(
               padding: const EdgeInsets.fromLTRB(0, 15, 0, 0),
               child: Text(
                 _articleName,
-                style: TextStyle(fontSize: _fontSize),
+                style: TextStyle(fontSize: _titleSize),
               ),
             ),
             Padding(
@@ -67,8 +73,8 @@ class CustomContainer extends StatelessWidget {
                 softWrap: true,
                 maxLines: 15,
                 overflow: TextOverflow.ellipsis,
-                style: const TextStyle(
-                  fontSize: 14,
+                style: TextStyle(
+                  fontSize: _fontSize,
                 ),
               ),
             ),
