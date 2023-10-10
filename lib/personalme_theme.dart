@@ -262,6 +262,9 @@ class MonitoRingTheme {
         foregroundColor: Color.fromARGB(255, 176, 178, 179),
         backgroundColor: Color.fromARGB(255, 63, 60, 60),
       ),
+      iconTheme: const IconThemeData(
+        color: Color.fromARGB(255, 176, 178, 179),
+      ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ButtonStyle(
           minimumSize: MaterialStateProperty.all(
