@@ -40,93 +40,115 @@ class _AboutScreenState extends State<AboutScreen> {
   }
 
   Widget smallScreenLayout() {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
+    return SizedBox(
       child: Column(
-        children: <Widget>[
-          const Image(
-            fit: BoxFit.scaleDown,
-            image: AssetImage('assets/images/MJ_small.jpg'),
-            width: 300,
-            height: 210,
-          ),
+        children: [
           Padding(
-            padding: const EdgeInsets.all(15.0),
-            child: SizedBox(
-              width: 60.w,
-              height: 30.h,
-              child: MarkupText(
-                getMarkupText(),
-                textAlign: TextAlign.justify,
-              ),
+            padding: const EdgeInsets.fromLTRB(0, 70, 0, 0),
+            child: Column(
+              children: <Widget>[
+                const Image(
+                  fit: BoxFit.scaleDown,
+                  image: AssetImage('assets/images/MJ_small.jpg'),
+                  width: 300,
+                  height: 210,
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: SizedBox(
+                    width: 60.w,
+                    height: 30.h,
+                    child: MarkupText(
+                      getMarkupText(),
+                      textAlign: TextAlign.justify,
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
+          const Padding(
+            padding: EdgeInsets.fromLTRB(0, 0, 0, 400),
+          ),
+          const CustomBottomBar(),
         ],
       ),
     );
   }
 
   Widget mediumScreenLayout() {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
+    return SizedBox(
       child: Column(
-        children: <Widget>[
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const Image(
-                fit: BoxFit.scaleDown,
-                image: AssetImage('assets/images/MJ_small.jpg'),
-                width: 360,
-                height: 270,
-              ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(15, 5, 15, 10),
-                child: SizedBox(
-                  width: 25.w,
-                  height: 35.h,
-                  child: MarkupText(
-                    getMarkupText(),
-                    textAlign: TextAlign.justify,
+        children: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(0, 70, 0, 0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Image(
+                  fit: BoxFit.scaleDown,
+                  image: AssetImage('assets/images/MJ_small.jpg'),
+                  width: 360,
+                  height: 270,
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(15, 5, 15, 10),
+                  child: SizedBox(
+                    width: 25.w,
+                    height: 35.h,
+                    child: MarkupText(
+                      getMarkupText(),
+                      textAlign: TextAlign.justify,
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
+          const Padding(
+            padding: EdgeInsets.fromLTRB(0, 0, 0, 600),
+          ),
+          const CustomBottomBar(),
         ],
       ),
     );
   }
 
   Widget largeScreenLayout() {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
+    return SizedBox(
       child: Column(
-        children: <Widget>[
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const Image(
-                fit: BoxFit.scaleDown,
-                image: AssetImage('assets/images/MJ_small.jpg'),
-                width: 400,
-                height: 310,
-              ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(15, 5, 15, 10),
-                child: SizedBox(
-                  width: 25.w,
-                  height: 30.h,
-                  child: MarkupText(
-                    getMarkupText(),
-                    textAlign: TextAlign.justify,
+        children: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(0, 70, 0, 0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Image(
+                  fit: BoxFit.scaleDown,
+                  image: AssetImage('assets/images/MJ_small.jpg'),
+                  width: 400,
+                  height: 310,
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(15, 5, 15, 10),
+                  child: SizedBox(
+                    width: 25.w,
+                    height: 30.h,
+                    child: MarkupText(
+                      getMarkupText(),
+                      textAlign: TextAlign.justify,
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
+          const Padding(
+            padding: EdgeInsets.fromLTRB(0, 0, 0, 700),
+          ),
+          const CustomBottomBar(),
         ],
       ),
     );
