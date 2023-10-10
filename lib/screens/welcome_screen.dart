@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 
 import '../models/models.dart';
 import '../widgets/widgets.dart';
+import '../screens/articles/invite_text.dart';
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({
@@ -17,6 +18,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   @override
   Widget build(BuildContext context) {
     final double screenWidth = MediaQuery.of(context).size.width;
+    final TextInvite invite = TextInvite();
 
     return Consumer<StateManager>(
       builder: (context, stateManager, child) {
@@ -29,10 +31,10 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             alignment: Alignment.topCenter,
             child: SingleChildScrollView(
               child: screenWidth < 700
-                  ? smallScreenLayout()
+                  ? smallScreenLayout(invite)
                   : screenWidth < 1200
-                      ? mediumScreenLayout()
-                      : largeScreenLayout(),
+                      ? mediumScreenLayout(invite)
+                      : largeScreenLayout(invite),
             ),
           ),
         );
@@ -40,7 +42,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     );
   }
 
-  Widget smallScreenLayout() {
+  Widget smallScreenLayout(TextInvite invite) {
     return const Padding(
       padding: EdgeInsets.all(8.0),
       child: Column(
@@ -51,7 +53,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     );
   }
 
-  Widget mediumScreenLayout() {
+  Widget mediumScreenLayout(TextInvite invite) {
     return const Column(
       children: [
         Text('medium screen layout'),
@@ -59,31 +61,31 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     );
   }
 
-  Widget largeScreenLayout() {
+  Widget largeScreenLayout(TextInvite invite) {
     return Container(
       width: 1400,
       alignment: Alignment.center,
-      child: const Column(
+      child: Column(
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               CustomContainer(
                   width: 500,
-                  height: 400,
+                  height: 500,
                   date: '01 Sep 2021',
                   articleName: 'Article name',
                   articlePath: 'Article path',
                   articleText: 'Sljksadf asdlfkj sdlfkja sa;dflk sflk j',
                   fontSize: 16,
-                  boxColor: Colors.brown),
+                  boxColor: Colors.yellow),
               CustomContainer(
                   width: 500,
-                  height: 400,
-                  date: '01 Sep 2021',
-                  articleName: 'Article name',
-                  articlePath: 'Article path',
-                  articleText: 'Sljksadf asdlfkj sdlfkja sa;dflk sflk j',
+                  height: 500,
+                  date: invite.article5['articleDate'].toString(),
+                  articleName: invite.article5['articleName'].toString(),
+                  articlePath: '/traversal',
+                  articleText: invite.article5['articleText'].toString(),
                   fontSize: 16,
                   boxColor: Colors.brown),
             ],
@@ -93,22 +95,22 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             children: [
               CustomContainer(
                   width: 500,
-                  height: 200,
-                  date: '01 Sep 2021',
-                  articleName: 'Article name',
-                  articlePath: 'Article path',
-                  articleText: 'Sljksadf asdlfkj sdlfkja sa;dflk sflk j',
+                  height: 500,
+                  date: invite.article4['articleDate'].toString(),
+                  articleName: invite.article4['articleName'].toString(),
+                  articlePath: '/solvenot',
+                  articleText: invite.article4['articleText'].toString(),
                   fontSize: 16,
-                  boxColor: Colors.brown),
+                  boxColor: Colors.red),
               CustomContainer(
                   width: 500,
-                  height: 300,
-                  date: '01 Sep 2021',
-                  articleName: 'Article name',
-                  articlePath: 'Article path',
-                  articleText: 'Sljksadf asdlfkj sdlfkja sa;dflk sflk j',
+                  height: 500,
+                  date: invite.article3['articleDate'].toString(),
+                  articleName: invite.article3['articleName'].toString(),
+                  articlePath: '/hunt',
+                  articleText: invite.article3['articleText'].toString(),
                   fontSize: 16,
-                  boxColor: Colors.brown),
+                  boxColor: Colors.black),
             ],
           ),
           Row(
@@ -116,22 +118,22 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             children: [
               CustomContainer(
                   width: 500,
-                  height: 400,
-                  date: '01 Sep 2021',
-                  articleName: 'Article name',
-                  articlePath: 'Article path',
-                  articleText: 'Sljksadf asdlfkj sdlfkja sa;dflk sflk j',
+                  height: 500,
+                  date: invite.article2['articleDate'].toString(),
+                  articleName: invite.article2['articleName'].toString(),
+                  articlePath: '/bookcase',
+                  articleText: invite.article2['articleText'].toString(),
                   fontSize: 16,
-                  boxColor: Colors.brown),
+                  boxColor: Colors.blue),
               CustomContainer(
                   width: 500,
-                  height: 200,
-                  date: '01 Sep 2021',
-                  articleName: 'Article name',
-                  articlePath: 'Article path',
-                  articleText: 'Sljksadf asdlfkj sdlfkja sa;dflk sflk j',
+                  height: 500,
+                  date: invite.article1['articleDate'].toString(),
+                  articleName: invite.article1['articleName'].toString(),
+                  articlePath: '/binarytree',
+                  articleText: invite.article1['articleText'].toString(),
                   fontSize: 16,
-                  boxColor: Colors.brown),
+                  boxColor: Colors.orange),
             ],
           ),
         ],
