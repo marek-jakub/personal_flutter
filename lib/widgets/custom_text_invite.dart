@@ -48,25 +48,38 @@ class CustomContainer extends StatelessWidget {
         ),
         child: Column(
           children: [
-            Row(
-              children: [
-                Text(_date),
-                Text(
-                  _articleName,
-                  style: TextStyle(fontSize: _fontSize),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+              child: Text(_date),
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(0, 15, 0, 0),
+              child: Text(
+                _articleName,
+                style: TextStyle(fontSize: _fontSize),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(10, 15, 10, 20),
+              child: Text(
+                _articleText,
+                textAlign: TextAlign.justify,
+                softWrap: true,
+                maxLines: 15,
+                overflow: TextOverflow.ellipsis,
+                style: const TextStyle(
+                  fontSize: 14,
                 ),
-              ],
+              ),
             ),
-            Text(
-              _articleName,
-              style: TextStyle(fontSize: _fontSize),
-            ),
-            Text(_articleText),
-            TextButton(
-              onPressed: () {
-                Navigator.pushNamed(context, _articlePath);
-              },
-              child: const Text('<< Continue reading >>'),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, _articlePath);
+                },
+                child: const Text('<< Continue reading >>'),
+              ),
             ),
           ],
         ),
