@@ -41,135 +41,162 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
   }
 
   Widget smallScreenLayout() {
-    return const Padding(
-      padding: EdgeInsets.all(8.0),
+    return const SizedBox(
       child: Column(
-        children: <Widget>[
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              CustomClickableArticle(
-                date: '17 Jul 2022',
-                articleName: 'In-order traversal of a nested list structure',
-                articlePath: '/traversal',
-                fontSize: 12,
-              ),
-              CustomClickableArticle(
-                date: '16 Mar 2022',
-                articleName: 'How not to solve HackerRank problems',
-                articlePath: '/solvenot',
-                fontSize: 12,
-              ),
-              CustomClickableArticle(
-                date: '27 Jan 2022',
-                articleName: 'Hunt for O(1) search',
-                articlePath: '/hunt',
-                fontSize: 12,
-              ),
-              CustomClickableArticle(
-                date: '20 Nov 2021',
-                articleName: 'An old-fashioned library (bookcase)',
-                articlePath: '/bookcase',
-                fontSize: 12,
-              ),
-              CustomClickableArticle(
-                date: '01 Sep 2021',
-                articleName: 'From binary tree to exponential search',
-                articlePath: '/binarytree',
-                fontSize: 12,
-              ),
-            ],
+        children: [
+          Padding(
+            padding: EdgeInsets.fromLTRB(0, 50, 0, 0),
+            child: Column(
+              children: <Widget>[
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    CustomClickableArticle(
+                      date: '17 Jul 2022',
+                      articleName:
+                          'In-order traversal of a nested list structure',
+                      articlePath: '/traversal',
+                      fontSize: 12,
+                    ),
+                    CustomClickableArticle(
+                      date: '16 Mar 2022',
+                      articleName: 'How not to solve HackerRank problems',
+                      articlePath: '/solvenot',
+                      fontSize: 12,
+                    ),
+                    CustomClickableArticle(
+                      date: '27 Jan 2022',
+                      articleName: 'Hunt for O(1) search',
+                      articlePath: '/hunt',
+                      fontSize: 12,
+                    ),
+                    CustomClickableArticle(
+                      date: '20 Nov 2021',
+                      articleName: 'An old-fashioned library (bookcase)',
+                      articlePath: '/bookcase',
+                      fontSize: 12,
+                    ),
+                    CustomClickableArticle(
+                      date: '01 Sep 2021',
+                      articleName: 'From binary tree to exponential search',
+                      articlePath: '/binarytree',
+                      fontSize: 12,
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
+          Padding(padding: EdgeInsets.fromLTRB(0, 0, 0, 700)),
+          CustomBottomBar(),
         ],
       ),
     );
   }
 
   Widget mediumScreenLayout() {
-    return const Padding(
-      padding: EdgeInsets.all(8.0),
+    return const SizedBox(
       child: Column(
-        children: <Widget>[
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              CustomClickableArticle(
-                date: '17 Jul 2022',
-                articleName: 'In-order traversal of a nested list structure',
-                articlePath: '/traversal',
-                fontSize: 14,
-              ),
-              CustomClickableArticle(
-                date: '16 Mar 2022',
-                articleName: 'How not to solve HackerRank problems',
-                articlePath: '/solvenot',
-                fontSize: 14,
-              ),
-              CustomClickableArticle(
-                date: '27 Jan 2022',
-                articleName: 'Hunt for O(1) search',
-                articlePath: '/hunt',
-                fontSize: 14,
-              ),
-              CustomClickableArticle(
-                date: '20 Nov 2021',
-                articleName: 'An old-fashioned library (bookcase)',
-                articlePath: '/bookcase',
-                fontSize: 14,
-              ),
-              CustomClickableArticle(
-                date: '01 Sep 2021',
-                articleName: 'From binary tree to exponential search',
-                articlePath: '/binarytree',
-                fontSize: 14,
-              ),
-            ],
+        children: [
+          Padding(
+            padding: EdgeInsets.fromLTRB(0, 50, 0, 0),
+            child: Column(
+              children: <Widget>[
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    CustomClickableArticle(
+                      date: '17 Jul 2022',
+                      articleName:
+                          'In-order traversal of a nested list structure',
+                      articlePath: '/traversal',
+                      fontSize: 14,
+                    ),
+                    CustomClickableArticle(
+                      date: '16 Mar 2022',
+                      articleName: 'How not to solve HackerRank problems',
+                      articlePath: '/solvenot',
+                      fontSize: 14,
+                    ),
+                    CustomClickableArticle(
+                      date: '27 Jan 2022',
+                      articleName: 'Hunt for O(1) search',
+                      articlePath: '/hunt',
+                      fontSize: 14,
+                    ),
+                    CustomClickableArticle(
+                      date: '20 Nov 2021',
+                      articleName: 'An old-fashioned library (bookcase)',
+                      articlePath: '/bookcase',
+                      fontSize: 14,
+                    ),
+                    CustomClickableArticle(
+                      date: '01 Sep 2021',
+                      articleName: 'From binary tree to exponential search',
+                      articlePath: '/binarytree',
+                      fontSize: 14,
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
+          Padding(padding: EdgeInsets.fromLTRB(0, 0, 0, 700)),
+          CustomBottomBar(),
         ],
       ),
     );
   }
 
   Widget largeScreenLayout() {
-    return const Padding(
-      padding: EdgeInsets.all(8.0),
+    return const SizedBox(
       child: Column(
-        children: <Widget>[
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              CustomClickableArticle(
-                date: '17 Jul 2022',
-                articleName: 'In-order traversal of a nested list structure',
-                articlePath: '/traversal',
-                fontSize: 15,
-              ),
-              CustomClickableArticle(
-                date: '16 Mar 2022',
-                articleName: 'How not to solve HackerRank problems',
-                articlePath: '/solvenot',
-                fontSize: 15,
-              ),
-              CustomClickableArticle(
-                date: '27 Jan 2022',
-                articleName: 'Hunt for O(1) search',
-                articlePath: '/hunt',
-                fontSize: 15,
-              ),
-              CustomClickableArticle(
-                date: '20 Nov 2021',
-                articleName: 'An old-fashioned library (bookcase)',
-                articlePath: '/bookcase',
-                fontSize: 15,
-              ),
-              CustomClickableArticle(
-                date: '01 Sep 2021',
-                articleName: 'From binary tree to exponential search',
-                articlePath: '/binarytree',
-                fontSize: 15,
-              ),
-            ],
+        children: [
+          Padding(
+            padding: EdgeInsets.fromLTRB(0, 50, 0, 0),
+            child: Column(
+              children: <Widget>[
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    CustomClickableArticle(
+                      date: '17 Jul 2022',
+                      articleName:
+                          'In-order traversal of a nested list structure',
+                      articlePath: '/traversal',
+                      fontSize: 15,
+                    ),
+                    CustomClickableArticle(
+                      date: '16 Mar 2022',
+                      articleName: 'How not to solve HackerRank problems',
+                      articlePath: '/solvenot',
+                      fontSize: 15,
+                    ),
+                    CustomClickableArticle(
+                      date: '27 Jan 2022',
+                      articleName: 'Hunt for O(1) search',
+                      articlePath: '/hunt',
+                      fontSize: 15,
+                    ),
+                    CustomClickableArticle(
+                      date: '20 Nov 2021',
+                      articleName: 'An old-fashioned library (bookcase)',
+                      articlePath: '/bookcase',
+                      fontSize: 15,
+                    ),
+                    CustomClickableArticle(
+                      date: '01 Sep 2021',
+                      articleName: 'From binary tree to exponential search',
+                      articlePath: '/binarytree',
+                      fontSize: 15,
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
+          Padding(padding: EdgeInsets.fromLTRB(0, 0, 0, 700)),
+          CustomBottomBar(),
         ],
       ),
     );
