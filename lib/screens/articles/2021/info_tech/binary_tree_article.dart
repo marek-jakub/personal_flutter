@@ -154,6 +154,7 @@ class _BinaryTreeArticleState extends State<BinaryTreeArticle> {
               ],
             ),
           ),
+          const UtterancesWidget(),
           const CustomBottomBar(),
         ],
       ),
