@@ -154,6 +154,7 @@ class _HrankProblemArticleState extends State<HrankProblemArticle> {
               ],
             ),
           ),
+          const UtterancesWidget(),
           const CustomBottomBar(),
         ],
       ),
