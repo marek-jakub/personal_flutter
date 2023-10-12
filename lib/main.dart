@@ -31,9 +31,9 @@ class _MarkPersonalState extends State<MarkPersonal> {
         builder: (context, stateManager, child) {
           ThemeData theme;
           if (stateManager.darkMode) {
-            theme = MonitoRingTheme.dark();
+            theme = PersonalMeTheme.dark();
           } else {
-            theme = MonitoRingTheme.light();
+            theme = PersonalMeTheme.light();
           }
 
           return FlutterSizer(builder: (context, orientation, deviceType) {
