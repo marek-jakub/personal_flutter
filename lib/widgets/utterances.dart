@@ -22,6 +22,7 @@ class UtterancesWidget extends StatelessWidget {
     );
 
     return SizedBox(
+      width: 700,
       height: 700,
       child: HtmlElementView(
         viewType: viewID,
