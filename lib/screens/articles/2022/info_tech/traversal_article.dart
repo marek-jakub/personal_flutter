@@ -154,6 +154,7 @@ class _TraversalArticleState extends State<TraversalArticle> {
               ],
             ),
           ),
+          const UtterancesWidget(),
           const CustomBottomBar(),
         ],
       ),
