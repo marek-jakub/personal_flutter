@@ -154,6 +154,7 @@ class _BookcaseArticleState extends State<BookcaseArticle> {
               ],
             ),
           ),
+          const UtterancesWidget(),
           const CustomBottomBar(),
         ],
       ),
