@@ -18,8 +18,6 @@ _Figure 1: A structure of nested lists is created as collisions occur. Here the 
 
 My first design dwelled on starting list of length 3 or 4 (with increasing list length by 1 at each inner level, unlike the Figure 1, where the length decreases, for clarity purposes of simplifying the structure). But this has quickly proved unproductive, as collisions appeared right away, practically being forced upon it, and this would greatly worsen the space efficiency. Then I tried a structure which lowered the size of every level, as can be seen in the Figure 1, I assumed that with sufficiently large starting list (e.g. of size 10) I could place !10 items in it. But this has proved not to be the case, as lists themselves occupy positions, thus the possible storage might by described as !10 minus number of collisions (and minus lists of length 1 as in these no two colliding items can be placed). Thus, with several tens of thousands of items to be stored (my tests had from 10^4 to 10^6 items to be stored) a starting list of a length between several tens to several hundreds places was found to be most useful (for search to be fast), with inner lists of increasing length (rather then decreasing length).
 
-Please, find the code in this [GitHub repository](https://github.com/marek-jakub/O1_search) as well. The abstract data type (ADT) is named DList, with D standing for ‘distributed’ (lists), the simple remainder method redistributing items through collisions, creating lists in lists.
-
 .py
 
 ***
