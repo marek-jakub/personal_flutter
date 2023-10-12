@@ -154,6 +154,7 @@ class _OoneSearchArticleState extends State<OoneSearchArticle> {
               ],
             ),
           ),
+          const UtterancesWidget(),
           const CustomBottomBar(),
         ],
       ),
