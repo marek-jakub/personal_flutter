@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 /// Holds application theme definition.
 ///
 /// Two definitions, light and dark mode.
-class MonitoRingTheme {
+class PersonalMeTheme {
   static TextTheme lightTextTheme = TextTheme(
     displayLarge: GoogleFonts.openSans(
       fontSize: 18,
