@@ -54,16 +54,6 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 CustomContainer(
                     width: 400,
                     height: 400,
-                    date: '01 Sep 2021',
-                    articleName: 'Article name',
-                    articlePath: 'Article path',
-                    articleText: 'Sljksadf asdlfkj sdlfkja sa;dflk sflk j',
-                    titleSize: 14,
-                    fontSize: 12,
-                    boxColor: Colors.yellow),
-                CustomContainer(
-                    width: 400,
-                    height: 400,
                     date: invite.article5['articleDate'].toString(),
                     articleName: invite.article5['articleName'].toString(),
                     articlePath: '/traversal',
@@ -129,16 +119,6 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             alignment: Alignment.center,
             child: Column(
               children: [
-                CustomContainer(
-                    width: 500,
-                    height: 500,
-                    date: '01 Sep 2021',
-                    articleName: 'Article name',
-                    articlePath: 'Article path',
-                    articleText: 'Sljksadf asdlfkj sdlfkja sa;dflk sflk j',
-                    titleSize: 15,
-                    fontSize: 14,
-                    boxColor: Colors.yellow),
                 CustomContainer(
                     width: 500,
                     height: 500,
@@ -210,16 +190,6 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    CustomContainer(
-                        width: 500,
-                        height: 500,
-                        date: '01 Sep 2021',
-                        articleName: 'Article name',
-                        articlePath: 'Article path',
-                        articleText: 'Sljksadf asdlfkj sdlfkja sa;dflk sflk j',
-                        titleSize: 16,
-                        fontSize: 14,
-                        boxColor: Colors.yellow),
                     CustomContainer(
                         width: 500,
                         height: 500,
