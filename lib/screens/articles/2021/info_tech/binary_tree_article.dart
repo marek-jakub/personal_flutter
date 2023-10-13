@@ -63,102 +63,108 @@ class _BinaryTreeArticleState extends State<BinaryTreeArticle> {
   }
 
   Widget smallScreenLayout(String? article) {
-    return SizedBox(
-      child: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Column(
-              children: <Widget>[
-                Markdown(
-                  data: article ?? '',
-                  shrinkWrap: true,
-                  styleSheet: MarkdownStyleSheet(
-                    p: const TextStyle(
-                      fontSize: 12,
+    return SingleChildScrollView(
+      child: SizedBox(
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                children: <Widget>[
+                  Markdown(
+                    data: article ?? '',
+                    shrinkWrap: true,
+                    styleSheet: MarkdownStyleSheet(
+                      p: const TextStyle(
+                        fontSize: 12,
+                      ),
+                      textAlign: WrapAlignment.spaceEvenly,
                     ),
-                    textAlign: WrapAlignment.spaceEvenly,
+                    imageBuilder: (uri, title, alt) {
+                      return Center(
+                        child: Image.asset(uri.toString()),
+                      );
+                    },
                   ),
-                  imageBuilder: (uri, title, alt) {
-                    return Center(
-                      child: Image.asset(uri.toString()),
-                    );
-                  },
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-          const UtterancesWidget(),
-          const CustomBottomBar(),
-        ],
+            const UtterancesWidget(),
+            const CustomBottomBar(),
+          ],
+        ),
       ),
     );
   }
 
   Widget mediumScreenLayout(String? article) {
-    return SizedBox(
-      child: Column(
-        children: [
-          Padding(
-            padding: EdgeInsets.fromLTRB(5.w, 8, 5.w, 8),
-            child: Column(
-              children: <Widget>[
-                Markdown(
-                  data: article ?? '',
-                  shrinkWrap: true,
-                  styleSheet: MarkdownStyleSheet(
-                    p: const TextStyle(
-                      fontSize: 14,
+    return SingleChildScrollView(
+      child: SizedBox(
+        child: Column(
+          children: [
+            Padding(
+              padding: EdgeInsets.fromLTRB(5.w, 8, 5.w, 8),
+              child: Column(
+                children: <Widget>[
+                  Markdown(
+                    data: article ?? '',
+                    shrinkWrap: true,
+                    styleSheet: MarkdownStyleSheet(
+                      p: const TextStyle(
+                        fontSize: 14,
+                      ),
+                      textAlign: WrapAlignment.spaceEvenly,
                     ),
-                    textAlign: WrapAlignment.spaceEvenly,
+                    imageBuilder: (uri, title, alt) {
+                      return Center(
+                        child: Image.asset(uri.toString()),
+                      );
+                    },
                   ),
-                  imageBuilder: (uri, title, alt) {
-                    return Center(
-                      child: Image.asset(uri.toString()),
-                    );
-                  },
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-          const UtterancesWidget(),
-          const CustomBottomBar(),
-        ],
+            const UtterancesWidget(),
+            const CustomBottomBar(),
+          ],
+        ),
       ),
     );
   }
 
   Widget largeScreenLayout(String? article) {
-    return SizedBox(
-      child: Column(
-        children: [
-          Padding(
-            padding: EdgeInsets.fromLTRB(20.w, 8, 20.w, 8),
-            child: Column(
-              children: <Widget>[
-                // If there is scrollable parent, use MarkdownBody
-                // instead of shrinkwrap: true.
-                Markdown(
-                  data: article ?? '',
-                  shrinkWrap: true,
-                  styleSheet: MarkdownStyleSheet(
-                    p: const TextStyle(
-                      fontSize: 14,
+    return SingleChildScrollView(
+      child: SizedBox(
+        child: Column(
+          children: [
+            Padding(
+              padding: EdgeInsets.fromLTRB(20.w, 8, 20.w, 8),
+              child: Column(
+                children: <Widget>[
+                  // If there is scrollable parent, use MarkdownBody
+                  // instead of shrinkwrap: true.
+                  Markdown(
+                    data: article ?? '',
+                    shrinkWrap: true,
+                    styleSheet: MarkdownStyleSheet(
+                      p: const TextStyle(
+                        fontSize: 14,
+                      ),
+                      textAlign: WrapAlignment.spaceEvenly,
                     ),
-                    textAlign: WrapAlignment.spaceEvenly,
+                    imageBuilder: (uri, title, alt) {
+                      return Center(
+                        child: Image.asset(uri.toString()),
+                      );
+                    },
                   ),
-                  imageBuilder: (uri, title, alt) {
-                    return Center(
-                      child: Image.asset(uri.toString()),
-                    );
-                  },
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-          const UtterancesWidget(),
-          const CustomBottomBar(),
-        ],
+            const UtterancesWidget(),
+            const CustomBottomBar(),
+          ],
+        ),
       ),
     );
   }
