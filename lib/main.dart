@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 //import 'package:sizer/sizer.dart';
@@ -38,6 +40,14 @@ class _MarkPersonalState extends State<MarkPersonal> {
 
           return FlutterSizer(builder: (context, orientation, deviceType) {
             return MaterialApp(
+              scrollBehavior: const MaterialScrollBehavior().copyWith(
+                dragDevices: {
+                  PointerDeviceKind.mouse,
+                  PointerDeviceKind.touch,
+                  PointerDeviceKind.stylus,
+                  PointerDeviceKind.unknown
+                },
+              ),
               debugShowCheckedModeBanner: false,
               theme: theme,
               initialRoute: '/',
