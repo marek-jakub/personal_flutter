@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:markup_text/markup_text.dart';
+import 'package:flutter_markdown/flutter_markdown.dart';
 //import 'package:sizer/sizer.dart';
 import 'package:flutter_sizer/flutter_sizer.dart';
 
@@ -56,14 +57,30 @@ class _AboutScreenState extends State<AboutScreen> {
                 Padding(
                   padding: const EdgeInsets.all(15.0),
                   child: SizedBox(
-                    width: 60.w,
-                    height: 30.h,
-                    child: MarkupText(
-                      getMarkupText(),
-                      textAlign: TextAlign.justify,
+                    width: 70.w,
+                    height: 40.h,
+                    child: MarkdownBody(
+                      data: getMarkupText(),
+                      styleSheet: MarkdownStyleSheet(
+                        p: const TextStyle(
+                          fontSize: 12,
+                        ),
+                        textAlign: WrapAlignment.spaceEvenly,
+                      ),
                     ),
                   ),
                 ),
+                // Padding(
+                //   padding: const EdgeInsets.all(15.0),
+                //   child: SizedBox(
+                //     width: 60.w,
+                //     height: 30.h,
+                //     child: MarkupText(
+                //       getMarkupText(),
+                //       textAlign: TextAlign.justify,
+                //     ),
+                //   ),
+                // ),
               ],
             ),
           ),
