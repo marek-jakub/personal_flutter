@@ -17,7 +17,7 @@ class UtterancesWidget extends StatelessWidget {
       (int id) => html.IFrameElement()
         ..width = MediaQuery.of(context).size.width.toString()
         ..height = MediaQuery.of(context).size.height.toString()
-        ..src = 'assets/utterances.html'
+        ..src = 'assets/utterances/utterances.html'
         ..style.border = 'none',
     );
 
