@@ -72,9 +72,9 @@ class _BinaryTreeArticleState extends State<BinaryTreeArticle> {
             padding: const EdgeInsets.all(8.0),
             child: Column(
               children: <Widget>[
-                Markdown(
+                MarkdownBody(
                   data: article ?? '',
-                  shrinkWrap: true,
+                  //shrinkWrap: true,
                   styleSheet: MarkdownStyleSheet(
                     p: const TextStyle(
                       fontSize: 12,
@@ -105,9 +105,9 @@ class _BinaryTreeArticleState extends State<BinaryTreeArticle> {
             padding: EdgeInsets.fromLTRB(5.w, 8, 5.w, 8),
             child: Column(
               children: <Widget>[
-                Markdown(
+                MarkdownBody(
                   data: article ?? '',
-                  shrinkWrap: true,
+                  //shrinkWrap: true,
                   styleSheet: MarkdownStyleSheet(
                     p: const TextStyle(
                       fontSize: 14,
@@ -140,9 +140,9 @@ class _BinaryTreeArticleState extends State<BinaryTreeArticle> {
               children: <Widget>[
                 // If there is scrollable parent, use MarkdownBody
                 // instead of shrinkwrap: true.
-                Markdown(
+                MarkdownBody(
                   data: article ?? '',
-                  shrinkWrap: true,
+                  //shrinkWrap: true,
                   styleSheet: MarkdownStyleSheet(
                     p: const TextStyle(
                       fontSize: 14,
