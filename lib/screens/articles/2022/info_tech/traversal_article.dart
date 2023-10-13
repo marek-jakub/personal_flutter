@@ -28,34 +28,36 @@ class _TraversalArticleState extends State<TraversalArticle> {
             preferredSize: Size.fromHeight(60.0),
             child: CustomAppBar(),
           ),
-          body: FutureBuilder<String>(
-            future: getArticle(),
-            builder: (context, snapshot) {
-              if (snapshot.hasData) {
-                return Container(
-                  alignment: Alignment.topCenter,
-                  child: SingleChildScrollView(
-                    child: screenWidth < 700
-                        ? smallScreenLayout(snapshot.data)
-                        : screenWidth < 1200
-                            ? mediumScreenLayout(snapshot.data)
-                            : largeScreenLayout(snapshot.data),
-                  ),
-                );
-              } else if (snapshot.hasError) {
-                return Container(
-                  alignment: Alignment.topCenter,
-                  child: SingleChildScrollView(
-                    child: screenWidth < 700
-                        ? smallScreenLayout('Error loading article')
-                        : screenWidth < 1200
-                            ? mediumScreenLayout('Error loading article')
-                            : largeScreenLayout('Error loading article'),
-                  ),
-                );
-              }
-              return const CircularProgressIndicator();
-            },
+          body: SingleChildScrollView(
+            child: FutureBuilder<String>(
+              future: getArticle(),
+              builder: (context, snapshot) {
+                if (snapshot.hasData) {
+                  return Container(
+                    alignment: Alignment.topCenter,
+                    child: SingleChildScrollView(
+                      child: screenWidth < 700
+                          ? smallScreenLayout(snapshot.data)
+                          : screenWidth < 1200
+                              ? mediumScreenLayout(snapshot.data)
+                              : largeScreenLayout(snapshot.data),
+                    ),
+                  );
+                } else if (snapshot.hasError) {
+                  return Container(
+                    alignment: Alignment.topCenter,
+                    child: SingleChildScrollView(
+                      child: screenWidth < 700
+                          ? smallScreenLayout('Error loading article')
+                          : screenWidth < 1200
+                              ? mediumScreenLayout('Error loading article')
+                              : largeScreenLayout('Error loading article'),
+                    ),
+                  );
+                }
+                return const CircularProgressIndicator();
+              },
+            ),
           ),
         );
       },
@@ -70,9 +72,9 @@ class _TraversalArticleState extends State<TraversalArticle> {
             padding: const EdgeInsets.all(8.0),
             child: Column(
               children: <Widget>[
-                Markdown(
+                MarkdownBody(
                   data: article ?? '',
-                  shrinkWrap: true,
+                  //shrinkWrap: true,
                   styleSheet: MarkdownStyleSheet(
                     p: const TextStyle(
                       fontSize: 12,
@@ -103,9 +105,9 @@ class _TraversalArticleState extends State<TraversalArticle> {
             padding: EdgeInsets.fromLTRB(5.w, 8, 5.w, 8),
             child: Column(
               children: <Widget>[
-                Markdown(
+                MarkdownBody(
                   data: article ?? '',
-                  shrinkWrap: true,
+                  //shrinkWrap: true,
                   styleSheet: MarkdownStyleSheet(
                     p: const TextStyle(
                       fontSize: 14,
@@ -138,9 +140,9 @@ class _TraversalArticleState extends State<TraversalArticle> {
               children: <Widget>[
                 // If there is scrollable parent, use MarkdownBody
                 // instead of shrinkwrap: true.
-                Markdown(
+                MarkdownBody(
                   data: article ?? '',
-                  shrinkWrap: true,
+                  //shrinkWrap: true,
                   styleSheet: MarkdownStyleSheet(
                     p: const TextStyle(
                       fontSize: 14,
