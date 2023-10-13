@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: subosito/flutter-action@v2
-      - run: flutter build web --no-tree-shake-icons --web-renderer canvaskit --release --base-href /
+      - run: flutter build web --no-tree-shake-icons --web-renderer html --release --base-href /
       - run: git config user.name github-actions
       - run: git config user.email github-actions@github.com
       - run: git --work-tree build/web add --all
