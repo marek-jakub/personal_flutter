@@ -29,7 +29,7 @@ class _AboutScreenState extends State<AboutScreen> {
         body: Container(
           alignment: Alignment.topCenter,
           child: SingleChildScrollView(
-            child: screenWidth < 700
+            child: screenWidth < 800
                 ? smallScreenLayout()
                 : screenWidth < 1200
                     ? mediumScreenLayout()
@@ -58,7 +58,7 @@ class _AboutScreenState extends State<AboutScreen> {
                   padding: const EdgeInsets.all(15.0),
                   child: SizedBox(
                     width: 70.w,
-                    height: 40.h,
+                    height: 70.h,
                     child: MarkdownBody(
                       data: getMarkupText(),
                       styleSheet: MarkdownStyleSheet(
@@ -113,7 +113,7 @@ class _AboutScreenState extends State<AboutScreen> {
                   padding: const EdgeInsets.fromLTRB(15, 5, 15, 10),
                   child: SizedBox(
                     width: 25.w,
-                    height: 35.h,
+                    height: 75.h,
                     child: MarkupText(
                       getMarkupText(),
                       textAlign: TextAlign.justify,
@@ -152,7 +152,7 @@ class _AboutScreenState extends State<AboutScreen> {
                   padding: const EdgeInsets.fromLTRB(15, 5, 15, 10),
                   child: SizedBox(
                     width: 25.w,
-                    height: 30.h,
+                    height: 75.h,
                     child: MarkupText(
                       getMarkupText(),
                       textAlign: TextAlign.justify,
