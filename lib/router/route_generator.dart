@@ -5,27 +5,36 @@ import '../screens/articles/articles.dart';
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
-    //final args = settings.arguments;
+    final args = settings.arguments;
 
     switch (settings.name) {
       case '/':
-        return MaterialPageRoute(builder: (_) => const HomeScreen());
+        return MaterialPageRoute(
+            settings: settings, builder: (_) => const HomeScreen());
       case '/about':
-        return MaterialPageRoute(builder: (_) => const AboutScreen());
+        return MaterialPageRoute(
+            settings: settings, builder: (_) => const AboutScreen());
       case '/articles':
-        return MaterialPageRoute(builder: (_) => const ArticlesScreen());
+        return MaterialPageRoute(
+            settings: settings, builder: (_) => const ArticlesScreen());
       case '/welcome':
-        return MaterialPageRoute(builder: (_) => const WelcomeScreen());
+        return MaterialPageRoute(
+            settings: settings, builder: (_) => const WelcomeScreen());
       case '/binarytree':
-        return MaterialPageRoute(builder: (_) => const BinaryTreeArticle());
+        return MaterialPageRoute(
+            settings: settings, builder: (_) => const BinaryTreeArticle());
       case '/bookcase':
-        return MaterialPageRoute(builder: (_) => const BookcaseArticle());
+        return MaterialPageRoute(
+            settings: settings, builder: (_) => const BookcaseArticle());
       case '/hunt':
-        return MaterialPageRoute(builder: (_) => const OoneSearchArticle());
+        return MaterialPageRoute(
+            settings: settings, builder: (_) => const OoneSearchArticle());
       case '/solvenot':
-        return MaterialPageRoute(builder: (_) => const HrankProblemArticle());
+        return MaterialPageRoute(
+            settings: settings, builder: (_) => const HrankProblemArticle());
       case '/traversal':
-        return MaterialPageRoute(builder: (_) => const TraversalArticle());
+        return MaterialPageRoute(
+            settings: settings, builder: (_) => const TraversalArticle());
       default:
         return _errorRoute();
     }
