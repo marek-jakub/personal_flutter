@@ -44,7 +44,7 @@ class CustomContainer extends StatelessWidget {
         decoration: BoxDecoration(
           border: Border.all(
             color: _boxColor,
-            width: 3.0,
+            width: 2.0,
           ),
         ),
         child: Column(
