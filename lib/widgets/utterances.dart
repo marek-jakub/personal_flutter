@@ -58,11 +58,13 @@ class UtterancesWidget extends StatelessWidget {
         ..style.border = 'none',
     );
 
-    return SizedBox(
-      width: 700,
-      height: 370,
-      child: HtmlElementView(
-        viewType: viewID,
+    return SingleChildScrollView(
+      child: SizedBox(
+        width: 700,
+        height: 650,
+        child: HtmlElementView(
+          viewType: viewID,
+        ),
       ),
     );
   }
