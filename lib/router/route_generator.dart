@@ -40,7 +40,7 @@ class RouteGenerator {
         ),
         body: const Center(
           child: Text('Sorry no route was found!',
-              style: TextStyle(color: Colors.red, fontSize: 18.0)),
+              style: TextStyle(color: Colors.red, fontSize: 17.0)),
         ),
       );
     });

@@ -32,6 +32,13 @@ migrate_working_dir/
 .pub/
 /build/
 
+# Not related to web app
+/android/
+/ios/
+/linux/
+/macos/
+/windows/
+
 # Symbolication related
 app.*.symbols
 
