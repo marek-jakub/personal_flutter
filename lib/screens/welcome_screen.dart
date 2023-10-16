@@ -60,7 +60,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     articleText: invite.article5['articleText'].toString(),
                     titleSize: 14,
                     fontSize: 12,
-                    boxColor: Colors.brown),
+                    boxColor: Colors.blue),
                 CustomContainer(
                     width: 400,
                     height: 400,
@@ -70,7 +70,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     articleText: invite.article4['articleText'].toString(),
                     titleSize: 14,
                     fontSize: 12,
-                    boxColor: Colors.red),
+                    boxColor: Colors.blue),
                 CustomContainer(
                     width: 400,
                     height: 400,
@@ -80,7 +80,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     articleText: invite.article3['articleText'].toString(),
                     titleSize: 14,
                     fontSize: 12,
-                    boxColor: Colors.black),
+                    boxColor: Colors.green),
                 CustomContainer(
                     width: 400,
                     height: 400,
@@ -90,7 +90,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     articleText: invite.article2['articleText'].toString(),
                     titleSize: 14,
                     fontSize: 12,
-                    boxColor: Colors.blue),
+                    boxColor: Colors.green),
                 CustomContainer(
                     width: 400,
                     height: 400,
@@ -100,7 +100,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     articleText: invite.article1['articleText'].toString(),
                     titleSize: 14,
                     fontSize: 12,
-                    boxColor: Colors.orange),
+                    boxColor: Colors.green),
               ],
             ),
           ),
@@ -128,7 +128,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     articleText: invite.article5['articleText'].toString(),
                     titleSize: 15,
                     fontSize: 14,
-                    boxColor: Colors.brown),
+                    boxColor: Colors.blue),
                 CustomContainer(
                     width: 500,
                     height: 500,
@@ -138,7 +138,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     articleText: invite.article4['articleText'].toString(),
                     titleSize: 15,
                     fontSize: 14,
-                    boxColor: Colors.red),
+                    boxColor: Colors.blue),
                 CustomContainer(
                     width: 500,
                     height: 500,
@@ -148,7 +148,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     articleText: invite.article3['articleText'].toString(),
                     titleSize: 15,
                     fontSize: 14,
-                    boxColor: Colors.black),
+                    boxColor: Colors.green),
                 CustomContainer(
                     width: 500,
                     height: 500,
@@ -158,7 +158,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     articleText: invite.article2['articleText'].toString(),
                     titleSize: 15,
                     fontSize: 14,
-                    boxColor: Colors.blue),
+                    boxColor: Colors.green),
                 CustomContainer(
                     width: 500,
                     height: 500,
@@ -168,7 +168,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     articleText: invite.article1['articleText'].toString(),
                     titleSize: 15,
                     fontSize: 14,
-                    boxColor: Colors.orange),
+                    boxColor: Colors.green),
               ],
             ),
           ),
@@ -199,7 +199,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                         articleText: invite.article5['articleText'].toString(),
                         titleSize: 16,
                         fontSize: 14,
-                        boxColor: Colors.brown),
+                        boxColor: Colors.blue),
                   ],
                 ),
                 Row(
@@ -214,7 +214,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                         articleText: invite.article4['articleText'].toString(),
                         titleSize: 16,
                         fontSize: 14,
-                        boxColor: Colors.red),
+                        boxColor: Colors.blue),
                     CustomContainer(
                         width: 500,
                         height: 500,
@@ -224,7 +224,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                         articleText: invite.article3['articleText'].toString(),
                         titleSize: 16,
                         fontSize: 14,
-                        boxColor: Colors.black),
+                        boxColor: Colors.green),
                   ],
                 ),
                 Row(
@@ -239,7 +239,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                         articleText: invite.article2['articleText'].toString(),
                         titleSize: 16,
                         fontSize: 14,
-                        boxColor: Colors.blue),
+                        boxColor: Colors.green),
                     CustomContainer(
                         width: 500,
                         height: 500,
@@ -249,7 +249,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                         articleText: invite.article1['articleText'].toString(),
                         titleSize: 16,
                         fontSize: 14,
-                        boxColor: Colors.orange),
+                        boxColor: Colors.green),
                   ],
                 ),
               ],
