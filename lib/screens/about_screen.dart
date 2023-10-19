@@ -114,9 +114,14 @@ class _AboutScreenState extends State<AboutScreen> {
                   child: SizedBox(
                     width: 25.w,
                     height: 75.h,
-                    child: MarkupText(
-                      getMarkupText(),
-                      textAlign: TextAlign.justify,
+                    child: MarkdownBody(
+                      data: getMarkupText(),
+                      styleSheet: MarkdownStyleSheet(
+                        p: const TextStyle(
+                          fontSize: 13,
+                        ),
+                        textAlign: WrapAlignment.spaceEvenly,
+                      ),
                     ),
                   ),
                 ),
@@ -153,9 +158,14 @@ class _AboutScreenState extends State<AboutScreen> {
                   child: SizedBox(
                     width: 25.w,
                     height: 75.h,
-                    child: MarkupText(
-                      getMarkupText(),
-                      textAlign: TextAlign.justify,
+                    child: MarkdownBody(
+                      data: getMarkupText(),
+                      styleSheet: MarkdownStyleSheet(
+                        p: const TextStyle(
+                          fontSize: 14,
+                        ),
+                        textAlign: WrapAlignment.spaceEvenly,
+                      ),
                     ),
                   ),
                 ),
