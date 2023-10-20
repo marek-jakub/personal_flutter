@@ -10,9 +10,7 @@ Using hash tables to beat the binary search timing at finding data items, hashin
 
 And this is where I tried to push it further. Rather than designing a hash function, the structure of the hash table itself can serve in placing data items at their positions, in a way, using the structure itself as a hash function. The aim has been to keep it simple, as that is where the efficiency is maintained. Using a starting list length, the remainder method is used for item placement, whenever a collision happens, a new list is placed at the given index, but this time its length is changed. The remainder method is used again, and the two colliding items are placed in the inner list. This happens whenever there is a collision. The important assumption here is that no two items have the same remainder when being placed in two successive lists, as the remainder method uses different list lengths. If the starting list is at a level 0, then each collision would introduce a list at an inner level (in this case level 0 + 1), and each level would have lists of the same length, yet different from other levels to introduce variation into the remainder method.
 
-![Nested lists](assets/articles/2022/01_article/02_structure.png "Nested lists structure")
-
-_Figure 1: A structure of nested lists is created as collisions occur. Here the length of lists decreases by 1 at each inner level._
+![Figure 1: A structure of nested lists is created as collisions occur. Here the length of lists decreases by 1 at each inner level.](assets/articles/2022/01_article/02_structure.png "Figure 1: A structure of nested lists is created as collisions occur. Here the length of lists decreases by 1 at each inner level.")
 
 ## The result
 
@@ -122,9 +120,7 @@ I tried to keep the code simple, with the Github repository containing explanato
 
 My aim has been to beat the binary search at search speed, after achieving this (although this is conditional, please, read on), I looked into the space efficiency. This is rather unsatisfactory, indeed, every time an inner list is created when a collision happens, space is wasted. But the catching detail about the structure of the ADT is that the speed and space are dependent on the starting list length, the range of items to be held and length difference between list levels (Figure 2).
 
-![Efficiency](assets/articles/2022/01_article/03_speed_space.png "Speed and efficiency")
-
-_Figure 2: Item range and lists' length predispose speed and space efficiency._
+![Figure 2: Item range and lists' length predispose speed and space efficiency.](assets/articles/2022/01_article/03_speed_space.png "Figure 2: Item range and lists' length predispose speed and space efficiency.")
 
 In my tests the items stored were in the range 10^4 – 10^5 (or 10^6), and the challenge was to find such a combination of starting list length and length changes between levels so as to maintain speed efficiency without wasting space. This is where a closer inspection would be appropriate. The combination which proved efficient (storing integers from 10 000  to 110 000) featured starting list of length 297 and upward changes of 41 (increasing list length by 41 at each level change). In this way there were just 297 collisions and the overall length of all inner lists was 100 386. This is rather fascinating. Items can be stored in such a way that all items take just a few steps to find. Thus the search is indeed O(1) even if difficult to achieve together with efficient space utilization.
 
