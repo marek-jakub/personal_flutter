@@ -35,6 +35,9 @@ class RouteGenerator {
       case '/traversal':
         return MaterialPageRoute(
             settings: settings, builder: (_) => const TraversalArticle());
+      case '/provider':
+        return MaterialPageRoute(
+            settings: settings, builder: (_) => const ProviderErrorArticle());
       default:
         return _errorRoute();
     }
