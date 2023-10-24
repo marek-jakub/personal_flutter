@@ -54,6 +54,16 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 CustomContainer(
                     width: 400,
                     height: 400,
+                    date: invite.article6['articleDate'].toString(),
+                    articleName: invite.article6['articleName'].toString(),
+                    articlePath: '/provider',
+                    articleText: invite.article6['articleText'].toString(),
+                    titleSize: 14,
+                    fontSize: 12,
+                    boxColor: Colors.yellow),
+                CustomContainer(
+                    width: 400,
+                    height: 400,
                     date: invite.article5['articleDate'].toString(),
                     articleName: invite.article5['articleName'].toString(),
                     articlePath: '/traversal',
@@ -119,6 +129,16 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             alignment: Alignment.center,
             child: Column(
               children: [
+                CustomContainer(
+                    width: 500,
+                    height: 500,
+                    date: invite.article6['articleDate'].toString(),
+                    articleName: invite.article6['articleName'].toString(),
+                    articlePath: '/provider',
+                    articleText: invite.article6['articleText'].toString(),
+                    titleSize: 15,
+                    fontSize: 14,
+                    boxColor: Colors.yellow),
                 CustomContainer(
                     width: 500,
                     height: 500,
@@ -190,6 +210,16 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                    CustomContainer(
+                        width: 500,
+                        height: 500,
+                        date: invite.article6['articleDate'].toString(),
+                        articleName: invite.article6['articleName'].toString(),
+                        articlePath: '/provider',
+                        articleText: invite.article6['articleText'].toString(),
+                        titleSize: 16,
+                        fontSize: 14,
+                        boxColor: Colors.yellow),
                     CustomContainer(
                         width: 500,
                         height: 500,

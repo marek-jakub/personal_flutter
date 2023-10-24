@@ -52,6 +52,13 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     CustomClickableArticle(
+                      date: '24 Oct 2023',
+                      articleName:
+                          'Flutter Error: Could not find the correct Provider…',
+                      articlePath: '/provider',
+                      fontSize: 12,
+                    ),
+                    CustomClickableArticle(
                       date: '17 Jul 2022',
                       articleName:
                           'In-order traversal of a nested list structure',
@@ -106,6 +113,13 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     CustomClickableArticle(
+                      date: '24 Oct 2023',
+                      articleName:
+                          'Flutter Error: Could not find the correct Provider…',
+                      articlePath: '/provider',
+                      fontSize: 14,
+                    ),
+                    CustomClickableArticle(
                       date: '17 Jul 2022',
                       articleName:
                           'In-order traversal of a nested list structure',
@@ -159,6 +173,13 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    CustomClickableArticle(
+                      date: '24 Oct 2023',
+                      articleName:
+                          'Flutter Error: Could not find the correct Provider…',
+                      articlePath: '/provider',
+                      fontSize: 15,
+                    ),
                     CustomClickableArticle(
                       date: '17 Jul 2022',
                       articleName:

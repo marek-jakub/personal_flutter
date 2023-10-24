@@ -1,5 +1,13 @@
 /// A text taken from blog articles used as a inivite to read.
 class TextInvite {
+  // Article from 24 October 2023
+  Map<String, String> article6 = {
+    'articleDate': '24-Oct-2023',
+    'articleName': 'Flutter Error: Could not find the correct Provider…',
+    'articleText':
+        'Building a mobile application focused on data management, some of the logic has been based on a local SQLite database operations (allowing local data editing and management prior to being sent off…). The provider has offered a single Facade to several forms (collecting data), but has served as a Pipeline (e.g. for sorting or transforming data) as well. The task has been simple, on filling a form, the data has been sent to the provider, which in turn called the right method (any one of the CRUD methods...) in the single instance of the database.',
+  };
+
   // Article from 16 March 2022
   Map<String, String> article5 = {
     'articleDate': '17-Jul-2022',
