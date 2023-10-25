@@ -83,7 +83,24 @@ class _BinaryTreeArticleState extends State<BinaryTreeArticle> {
                   ),
                   imageBuilder: (uri, title, alt) {
                     return Center(
-                      child: Image.asset(uri.toString()),
+                      child: Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(0, 4, 0, 4),
+                            child: Image.asset(uri.toString()),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(0, 5, 0, 8),
+                            child: Text(
+                              alt.toString(),
+                              style: const TextStyle(
+                                fontSize: 12,
+                                fontStyle: FontStyle.italic,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     );
                   },
                 ),
@@ -116,7 +133,24 @@ class _BinaryTreeArticleState extends State<BinaryTreeArticle> {
                   ),
                   imageBuilder: (uri, title, alt) {
                     return Center(
-                      child: Image.asset(uri.toString()),
+                      child: Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(0, 4, 0, 4),
+                            child: Image.asset(uri.toString()),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(0, 5, 0, 8),
+                            child: Text(
+                              alt.toString(),
+                              style: const TextStyle(
+                                fontSize: 12,
+                                fontStyle: FontStyle.italic,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     );
                   },
                 ),
@@ -151,7 +185,24 @@ class _BinaryTreeArticleState extends State<BinaryTreeArticle> {
                   ),
                   imageBuilder: (uri, title, alt) {
                     return Center(
-                      child: Image.asset(uri.toString()),
+                      child: Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(0, 4, 0, 4),
+                            child: Image.asset(uri.toString()),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(0, 5, 0, 8),
+                            child: Text(
+                              alt.toString(),
+                              style: const TextStyle(
+                                fontSize: 12,
+                                fontStyle: FontStyle.italic,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     );
                   },
                 ),
