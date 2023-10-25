@@ -144,7 +144,7 @@ class _HrankProblemArticleState extends State<HrankProblemArticle> {
                             child: Text(
                               alt.toString(),
                               style: const TextStyle(
-                                fontSize: 12,
+                                fontSize: 14,
                                 fontStyle: FontStyle.italic,
                               ),
                             ),
@@ -196,7 +196,7 @@ class _HrankProblemArticleState extends State<HrankProblemArticle> {
                             child: Text(
                               alt.toString(),
                               style: const TextStyle(
-                                fontSize: 12,
+                                fontSize: 14,
                                 fontStyle: FontStyle.italic,
                               ),
                             ),
