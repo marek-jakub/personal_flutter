@@ -14,15 +14,11 @@ Swap nodes [Algo] is a very nice problem. The input is a number of lines contain
 
 I didn’t build a binary tree with the nodes given as input, instead, I built a structure (list of lists) modelling the tree by keeping nodes in lists, each list holding nodes found at a certain level of the tree. An example of input structure is given in the Figure 1:
 
-![Integer input](assets/articles/2022/02_article/03_input.png "Input of integer couples")
-
-_Figure 1: Line after line of integer couples signifying previous nodes’ children._
+![Figure 1: Line after line of integer couples signifying previous nodes’ children.](assets/articles/2022/02_article/03_input.png "Figure 1: Line after line of integer couples signifying previous nodes’ children.")
 
 In the given example, there are 17 nodes overall, the node 1 (not in input) being assumed root node (depth 1), the tree can be build with integers signifying nodes and -1 signifying no descendants. As each node can have a maximum of two children, tree levels can be build from the given input, each depth having double the amount of previous depth nodes, as can be seen in the Figure 2:
 
-![Nested lists](assets/articles/2022/02_article/02_lists.png "Tree structure approximation")
-
-_Figure 2: Even if nested lists provide tree structure approximation and simple implementation, they could be difficult to work with._
+![Figure 2: Even if nested lists provide tree structure approximation and simple implementation, they could be difficult to work with.](assets/articles/2022/02_article/02_lists.png "Figure 2: Even if nested lists provide tree structure approximation and simple implementation, they could be difficult to work with.")
 
 As the starting structure had been only an approximation of the structure really needed, and because following stages required and relied on that structure to achieve their goals, I had a hard time defining the logic of the solution. The next stage after building the tree structure, swapping nodes at given depth, proved a difficult task. Instead of working with single nodes in binary tree, there were lists which needed reordering and swapping. This resulted in an ugly function with another helper function and lots of conditional statements and loops (the code is at the end of the article). Looking at it now,  it is difficult to understand, with methods having nightmarish cyclomatic complexity and scoring very low on maintainability (and I didn’t help it with adding minimum comments). Thus, structural simplicity might bring in the cost of code complexity.
 

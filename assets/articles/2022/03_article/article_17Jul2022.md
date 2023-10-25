@@ -8,9 +8,7 @@ In-order traversal is usually applied to tree structures. In my previous blog po
 
 To refresh memory, nested lists provide a simple data structure, and such a structure was used to approximate binary tree. The normal implementation of in-order traversal of a binary tree is described as a recursive in-order visit of the left subtree, then root node and finally a recursive in-order visit of the right subtree (Miller and Ranum, 2011). Nested lists (such as Figure 1) lack the structure of interconnected nodes of a binary tree, instead, they form an ordered collection of items (objects in the case of inner lists). As can be seen in the figure, while natural numbers indicate tree nodes, the value of -1 indicates no children.
 
-![Nested lists](assets/articles/2022/03_article/01_lists.png "Nested lists structure")
-
-_Figure 1: Nested lists, approximating a binary tree._
+![Figure 1: Nested lists, approximating a binary tree.](assets/articles/2022/03_article/01_lists.png "Figure 1: Nested lists, approximating a binary tree.")
 
 To be able to define in-order traversal of such a structure, a pattern of movement had to be found, which would follow recursive left subtree, root, recursive right subtree path.
 
@@ -18,9 +16,7 @@ In-order traversal starts at the root, which sits at depth 1. It checks the root
 
 In search of a solution it is important to look for patterns (or regular occurrences). Having defined the structure and desired movement through that structure for in-order traversal, characteristics of that movement were still missing. In such situations, modelling helps. Using simple models (paper sketches), it was found that if a position of the visited node at the current level of the tree is determined (starting from left and counting from 1), then positions of its children can easily be calculated, i.e. that there exists a pattern, as given in the Figure 2:
 
-![Movement](assets/articles/2022/03_article/02_lists_travel.png "Binary tree-like movement")
-
-_Figure 2: A description of a binary tree-like movement in nested list structure, through nodes 1-3-6-12._
+![Figure 2: A description of a binary tree-like movement in nested list structure, through nodes 1-3-6-12.](assets/articles/2022/03_article/02_lists_travel.png "Figure 2: A description of a binary tree-like movement in nested list structure, through nodes 1-3-6-12.")
 
 The binary tree movement in nested lists structure is achieved by direct determination of positions of a node’s children. While in a binary tree nodes are connected through node attribute values (e.g. ‘leftChild’ and ‘rightChild’), in this case left child is found by determining position of parent node in the inner list (signifying tree level), e.g. position is 3 in the case of node ‘6’ in the Figure 2 and applying the formula (3 x 2) - 2 to give 4. The right child is found by applying formula (3 x 2) - 1 to give 5. Now positions 4 and 5 of the following list (signifying next depth of the tree) can be checked for existing nodes possibly holding that node’s children.
 

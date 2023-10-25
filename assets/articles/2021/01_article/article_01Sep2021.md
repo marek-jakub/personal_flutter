@@ -8,15 +8,11 @@
 
 Studying algorithms and data structures by Miller and Ranum (2011) I came across binary tree abstract data type (ADT). It is an ingenious device, where its Yes/No or 0/1 choice paths lead to many useful implementations. As I drew a binary tree for an assignment, I thought, why not try to implement a ternary tree ADT, with three choice paths instead of two. It would be such a novel idea, wouldn’t it?
 
-![Binary and ternary](assets/articles/2021/01_article/01_b_to_t.jpg "Binary to ternary")
-
-_Adding an extra path to each node makes ternary tree out of binary tree._
+![Adding an extra path to each node makes ternary tree out of binary tree.](assets/articles/2021/01_article/01_b_to_t.jpg "Adding an extra path to each node makes ternary tree out of binary tree.")
 
 In my newbie ignorance I thought I had come across a new implementation of a tree. However, a quick search deflated my enthusiasm, as the ternary tree is a well-known type. Putting my design on paper, I observed a catching detail about the tree. If the nodes were numbered, the index of nodes at a level edges could easily be predicted. The formula was given by adding 1 to previous node index at the rightmost extreme end of a level and multiplying by 3 (i.e., number of edges per node):
 
-![Tree indices](assets/articles/2021/01_article/02_indices.jpg "Ternary tree indices")
-
-_Finding node indices at extremities for each level of the ternary tree._
+![Finding node indices at extremities for each level of the ternary tree.](assets/articles/2021/01_article/02_indices.jpg "Finding node indices at extremities for each level of the ternary tree.")
 
 Now, both edge nodes can have easily defined indices, if the rightmost node index is divided by 3, then the leftmost node index at the same level is determined. This led me to ponder whether it could be used in a search algorithm. The binary search halves the number of items in an ordered collection at each turn, this search would dismiss levels not containing the item searched for. After finding the tree level containing the item of interest, the search would continue with the items contained in the given level, i.e. items bordered by the leftmost and rightmost nodes for the given level. The only condition, the same as with the binary search, is that the data is ordered.
 
@@ -51,9 +47,7 @@ def level_search (an_array, an_item):
 
 Bentley and Yao (1976) propose a two-step search, or search of several steps, where an item searched for is found by a binary search after limiting its existence by well-defined borders. Indeed, the function given above performs much worse compared to the binary search:
 
-![Binary search](assets/articles/2021/01_article/03_compared.jpg "Search timings compared")
-
-_Binary search and level search timings compared, with search items generated randomly._
+![Binary search and level search timings compared, with search items generated randomly.](assets/articles/2021/01_article/03_compared.jpg "Binary search and level search timings compared, with search items generated randomly.")
 
 If an ordered collection of size n is considered, then the maximum number of steps taken by a binary search in an item look-up is given by log 2 (n). It is not exactly so with the function given above. Even though its Big-O is logarithmic (log n), the search steps are being repeated over and over until the item being sought is found (or not). How does that happen? Given that an item which is being sought exists in an ordered collection, then in the first run the level it sits in is determined (let us say level1 – the first run). The second run takes the whole level1, starts from the first item in the level and again determines the level (let us say level2 – the second run) the item sits in, as if the items in the level1 formed a new tree, with the first item in the level1 being the root node of that tree. These runs are being repeated until the item is found. This means that in the worst-case scenario, the number of steps taken to found it would be log 3 (n) + log 3 (level1 size) + log 3 (level2 size) and so on until it is found. In this way, levels are being discounted in search, but the size of the next step search table depends on where in the collection the item searched for resides, as the search starts from the beginning of the collection (or level). Thus, the search takes more steps to find the item, compared to the binary search. However, with the level_search function the search starts at the beginning of the collection, it might therefore perform better with items searched for residing close to the beginning of the collection (compared to the binary search). That would be its best-case scenario.
 
