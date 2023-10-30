@@ -20,17 +20,31 @@ class _CustomModeSelectionState extends State<CustomModeSelection> {
         return Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Icon(Icons.light_mode),
-            Switch(
-              value: stateManager.darkMode,
-              onChanged: (value) {
-                stateManager.setDarkMode = value;
+            IconButton(
+              onPressed: () async {
+                stateManager.setDarkMode = !stateManager.darkMode;
               },
+              icon: _showIcon(stateManager),
             ),
-            const Icon(Icons.dark_mode),
+            // const Icon(Icons.light_mode),
+            // Switch(
+            //   value: stateManager.darkMode,
+            //   onChanged: (value) {
+            //     stateManager.setDarkMode = value;
+            //   },
+            // ),
+            // const Icon(Icons.dark_mode),
           ],
         );
       },
     );
+  }
+
+  Icon _showIcon(StateManager stateManager) {
+    Icon mode = const Icon(Icons.light_mode);
+    if (stateManager.darkMode) {
+      mode = const Icon(Icons.dark_mode);
+    }
+    return mode;
   }
 }
