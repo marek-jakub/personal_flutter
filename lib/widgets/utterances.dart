@@ -4,6 +4,10 @@ import 'dart:ui_web' as ui;
 
 import 'package:flutter/material.dart';
 
+/// Comments widget implemented with the help of utteranc.es widget.
+///
+/// Not used due to bugs which currently limit its use, e.g., utterances fail
+/// to map comments to pathname or page title.
 class UtterancesWidget extends StatelessWidget {
   const UtterancesWidget({super.key});
 
