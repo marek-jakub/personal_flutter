@@ -1,16 +1,9 @@
-# personalme
+# Marek Jakub
 
-A new Flutter project.
+This is a simple web application created with Dart, using Flutter framework.
 
-## Getting Started
+There are several notable parts:
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- the articles in the blog are written as simple markdown, these are rendered using 3rd party flutter_markdown package.
+- icons for e.g., LinkedIn, or GitHub are taken from the 3rd party package icons_flutter.
+- web app responsiveness have been achieved with the help of MediaQuery, but also the 3rd party package sizer.
