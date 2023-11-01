@@ -2,7 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-//import 'package:sizer/sizer.dart';
+import 'package:url_strategy/url_strategy.dart';
 import 'package:flutter_sizer/flutter_sizer.dart';
 
 import '../models/models.dart';
@@ -11,6 +11,7 @@ import '../router/route_generator.dart';
 import 'personalme_theme.dart';
 
 void main() {
+  setPathUrlStrategy();
   runApp(const MarkPersonal());
 }
 
