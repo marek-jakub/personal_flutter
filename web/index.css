@@ -2,6 +2,16 @@
 * A simple spinner shown on web app being loaded.
 */
 
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #d3cbcb; /* Background color while loading */
+}
+
 .spinner-container {
     position: relative;
     width: 64px;
@@ -9,7 +19,7 @@
 }
 
 .spinner {
-    border: 6px solid #41515c; /* Spinner color */
+    border: 6px solid #1d6ca1; /* Spinner color */
     border-top: 6px solid transparent; /* Transparent border on top to create spinner effect */
     border-radius: 50%;
     width: 64px;
