@@ -18,7 +18,7 @@ The provider has offered a single Facade to several forms (collecting data), but
 
 This has been a simple error, caused by the change in the name of the database class the provider has been supposed to access. Once this error has been corrected (the name of the class given at provider initialization has been adjusted to mirror that of the database), the error has been resolved.
 
-The first sample is the simple start of the database class with its name and schema version:
+The first code sample is the simple start of the database class with its name and schema version:
 
 .dart
 
@@ -34,7 +34,7 @@ int get schemaVersion => 1;
 }
 ~~~
 
-The second sample is the provider set at the application initialization in the main.dart file, it should seek to access the right class name of the database:
+The second code sample is the provider set at the application initialization in the main.dart file, it should seek to access the right class name of the database:
 
 .dart
 
