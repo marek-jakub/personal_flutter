@@ -1,6 +1,6 @@
 # Marek Jakub
 
-This is a simple web application created with Dart, using Flutter framework.
+This is a simple web application written in Dart, using Flutter framework.
 
 There are several notable parts:
 
