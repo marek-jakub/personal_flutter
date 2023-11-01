@@ -1,0 +1,23 @@
+/**
+* A simple spinner shown on web app being loaded.
+*/
+
+.spinner-container {
+    position: relative;
+    width: 64px;
+    height: 64px;
+}
+
+.spinner {
+    border: 6px solid #41515c; /* Spinner color */
+    border-top: 6px solid transparent; /* Transparent border on top to create spinner effect */
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    animation: spin 1s linear infinite; /* Animation for spinning effect */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
