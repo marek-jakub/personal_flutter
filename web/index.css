@@ -9,7 +9,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #d3cbcb; /* Background color while loading */
+    background-color: #ffeeeeee; /* Background color while loading */
 }
 
 .spinner-container {
