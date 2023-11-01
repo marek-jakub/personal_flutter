@@ -29,7 +29,7 @@ Widget smallScreenLayout(BuildContext context) {
     menuChildren: [
       MenuItemButton(
         child: const Text('Home'),
-        onPressed: () => Navigator.pushNamed(context, '/welcome'),
+        onPressed: () => Navigator.pushNamed(context, '/'),
       ),
       MenuItemButton(
         child: const Text('Blog'),
@@ -83,7 +83,7 @@ Widget mediumScreenLayout(BuildContext context) {
           padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: TextButton(
             onPressed: () {
-              Navigator.pushNamed(context, '/welcome');
+              Navigator.pushNamed(context, '/');
             },
             child: const Text('Home'),
           ),
@@ -148,7 +148,7 @@ Widget largeScreenLayout(BuildContext context) {
           padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
           child: TextButton(
             onPressed: () {
-              Navigator.pushNamed(context, '/welcome');
+              Navigator.pushNamed(context, '/');
             },
             child: const Text('Home'),
           ),

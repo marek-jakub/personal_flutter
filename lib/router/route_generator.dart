@@ -10,16 +10,13 @@ class RouteGenerator {
     switch (settings.name) {
       case '/':
         return MaterialPageRoute(
-            settings: settings, builder: (_) => const HomeScreen());
+            settings: settings, builder: (_) => const WelcomeScreen());
       case '/about':
         return MaterialPageRoute(
             settings: settings, builder: (_) => const AboutScreen());
       case '/articles':
         return MaterialPageRoute(
             settings: settings, builder: (_) => const ArticlesScreen());
-      case '/welcome':
-        return MaterialPageRoute(
-            settings: settings, builder: (_) => const WelcomeScreen());
       case '/binarytree':
         return MaterialPageRoute(
             settings: settings, builder: (_) => const BinaryTreeArticle());
