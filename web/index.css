@@ -4,30 +4,51 @@
 
 body {
     margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 1rem;
+  }
+  
+  .blocks {
     height: 100vh;
-    background-color: #ffeeeeee; /* Background color while loading */
-}
-
-.spinner-container {
+    display: flex;
+    align-items: center;
     position: relative;
-    width: 64px;
-    height: 64px;
-}
-
-.spinner {
-    border: 6px solid #2d303d; /* Spinner color */
-    border-top: 6px solid transparent; /* Transparent border on top to create spinner effect */
+    justify-content: center;
+  }
+  
+  .block {
+    --sz: 8vmin;
+    --tX: 0;
+    --animation: 700ms cubic-bezier(0.3, 0.5, 0.4, 0.9) infinite alternate-reverse;
+    --hm: 4.5vmin;
+    height: var(--sz);
+    width: var(--sz);
+    background-image: var(--bg);
     border-radius: 50%;
-    width: 64px;
-    height: 64px;
-    animation: spin 1s linear infinite; /* Animation for spinning effect */
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
+    transform: translateX(var(--tX));
+    mix-blend-mode: lighten;
+  }
+  
+  .orange {
+    --bg: linear-gradient(-50deg, #949391 0%, #449451 100%);
+    margin-right: var(--hm);
+    animation: attract-orange var(--animation);
+  }
+  
+  .blue {
+    --bg: linear-gradient(50deg, #3c4444 0%, #464288 100%);
+    margin-left: var(--hm);
+    animation: attract-blue var(--animation);
+  }
+  
+  @keyframes attract-orange {
+    to {
+      transform: translateX(calc(var(--sz) + calc(var(--hm) / 4)));
+    }
+  }
+  
+  @keyframes attract-blue {
+    to {
+      transform: translateX(calc(var(--sz) * -1 - calc(var(--hm) / 4)));
+    }
+  }
+  
