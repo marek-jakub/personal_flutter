@@ -8,7 +8,7 @@ body {
   }
   
   .blocks {
-    height: 100vh;
+    height: 90vh;
     display: flex;
     align-items: center;
     position: relative;
@@ -16,9 +16,9 @@ body {
   }
   
   .block {
-    --sz: 8vmin;
+    --sz: 7vmin;
     --tX: 0;
-    --animation: 700ms cubic-bezier(0.3, 0.5, 0.4, 0.9) infinite alternate-reverse;
+    --animation: 900ms cubic-bezier(0.3, 0.5, 0.4, 0.9) infinite alternate-reverse;
     --hm: 4.5vmin;
     height: var(--sz);
     width: var(--sz);
@@ -29,26 +29,26 @@ body {
   }
   
   .orange {
-    --bg: linear-gradient(-50deg, #949391 0%, #449451 100%);
+    --bg: linear-gradient(-50deg, #ad9158 0%, #1d3a23 100%);
     margin-right: var(--hm);
     animation: attract-orange var(--animation);
   }
   
   .blue {
-    --bg: linear-gradient(50deg, #3c4444 0%, #464288 100%);
+    --bg: linear-gradient(50deg, #275757 0%, #adabce 100%);
     margin-left: var(--hm);
     animation: attract-blue var(--animation);
   }
   
   @keyframes attract-orange {
     to {
-      transform: translateX(calc(var(--sz) + calc(var(--hm) / 4)));
+      transform: translateX(calc(var(--sz) + calc(var(--hm) / 5)));
     }
   }
   
   @keyframes attract-blue {
     to {
-      transform: translateX(calc(var(--sz) * -1 - calc(var(--hm) / 4)));
+      transform: translateX(calc(var(--sz) * -1 - calc(var(--hm) / 5)));
     }
   }
   
