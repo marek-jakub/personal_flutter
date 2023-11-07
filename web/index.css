@@ -29,13 +29,13 @@ body {
   }
   
   .orange {
-    --bg: linear-gradient(-50deg, #ad9158 0%, #1d3a23 100%);
+    --bg: linear-gradient(-50deg, #dda73b 0%, #35ca53 100%);
     margin-right: var(--hm);
     animation: attract-orange var(--animation);
   }
   
   .blue {
-    --bg: linear-gradient(50deg, #275757 0%, #adabce 100%);
+    --bg: linear-gradient(50deg, #11afaf 0%, #0d095c 100%);
     margin-left: var(--hm);
     animation: attract-blue var(--animation);
   }
