@@ -54,6 +54,16 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 CustomContainer(
                     width: 400,
                     height: 400,
+                    date: invite.article7['articleDate'].toString(),
+                    articleName: invite.article7['articleName'].toString(),
+                    articlePath: '/pgadminerror',
+                    articleText: invite.article7['articleText'].toString(),
+                    titleSize: 14,
+                    fontSize: 12,
+                    boxColor: Colors.black),
+                CustomContainer(
+                    width: 400,
+                    height: 400,
                     date: invite.article6['articleDate'].toString(),
                     articleName: invite.article6['articleName'].toString(),
                     articlePath: '/provider',
@@ -132,6 +142,16 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 CustomContainer(
                     width: 500,
                     height: 500,
+                    date: invite.article7['articleDate'].toString(),
+                    articleName: invite.article7['articleName'].toString(),
+                    articlePath: '/pgadminerror',
+                    articleText: invite.article7['articleText'].toString(),
+                    titleSize: 15,
+                    fontSize: 14,
+                    boxColor: Colors.black),
+                CustomContainer(
+                    width: 500,
+                    height: 500,
                     date: invite.article6['articleDate'].toString(),
                     articleName: invite.article6['articleName'].toString(),
                     articlePath: '/provider',
@@ -207,6 +227,21 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             alignment: Alignment.center,
             child: Column(
               children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    CustomContainer(
+                        width: 500,
+                        height: 500,
+                        date: invite.article7['articleDate'].toString(),
+                        articleName: invite.article7['articleName'].toString(),
+                        articlePath: '/pgadminerror',
+                        articleText: invite.article7['articleText'].toString(),
+                        titleSize: 16,
+                        fontSize: 14,
+                        boxColor: Colors.black),
+                  ],
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [

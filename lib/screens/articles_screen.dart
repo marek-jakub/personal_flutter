@@ -57,6 +57,13 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           CustomClickableArticle(
+                            date: '14 Nov 2023',
+                            articleName:
+                                'Error: Failed to create the directory pgadmin…',
+                            articlePath: '/pgadminerror',
+                            fontSize: 12,
+                          ),
+                          CustomClickableArticle(
                             date: '24 Oct 2023',
                             articleName:
                                 'Flutter Error: Could not find the correct Provider…',
@@ -143,6 +150,13 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           CustomClickableArticle(
+                            date: '14 Nov 2023',
+                            articleName:
+                                'Error: Failed to create the directory pgadmin…',
+                            articlePath: '/pgadminerror',
+                            fontSize: 14,
+                          ),
+                          CustomClickableArticle(
                             date: '24 Oct 2023',
                             articleName:
                                 'Flutter Error: Could not find the correct Provider…',
@@ -228,6 +242,13 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
+                          CustomClickableArticle(
+                            date: '14 Nov 2023',
+                            articleName:
+                                'Error: Failed to create the directory pgadmin…',
+                            articlePath: '/pgadminerror',
+                            fontSize: 15,
+                          ),
                           CustomClickableArticle(
                             date: '24 Oct 2023',
                             articleName:

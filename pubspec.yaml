@@ -49,6 +49,7 @@ flutter:
     - assets/articles/2022/02_article/
     - assets/articles/2022/03_article/
     - assets/articles/2023/01_article/
+    - assets/articles/2023/02_article/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

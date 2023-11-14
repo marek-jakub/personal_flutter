@@ -35,6 +35,9 @@ class RouteGenerator {
       case '/provider':
         return MaterialPageRoute(
             settings: settings, builder: (_) => const ProviderErrorArticle());
+      case '/pgadminerror':
+        return MaterialPageRoute(
+            settings: settings, builder: (_) => const PgadminErrorArticle());
       default:
         return _errorRoute();
     }

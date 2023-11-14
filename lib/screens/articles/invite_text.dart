@@ -1,5 +1,13 @@
 /// A text taken from blog articles used as a inivite to read.
 class TextInvite {
+  // Article from 14 November 2023
+  Map<String, String> article7 = {
+    'articleDate': '14-Nov-2023',
+    'articleName': 'Error: Failed to create the directory pgadmin…',
+    'articleText':
+        'The following error has been encountered in the following environment: Linux Mint 21.2 Cinnamon running Linux Kernel 5.15.0-87-generic. SQL is one of the most sought-after languages used in data processing and analysis, and while it is rather easy to install databases for data storage through APT package manager (e.g., PostgreSQL), administration and development platform (in this case pgAdmin) offers several ways of installation. One of the ways pgAdmin could be installed in Mint is by using Python’s pip tool, which is a package manager (or package installer). However, using this tool requires setting up a Python virtual environment (venv), which is usually done at a local level (not root or user level).',
+  };
+
   // Article from 24 October 2023
   Map<String, String> article6 = {
     'articleDate': '24-Oct-2023',
