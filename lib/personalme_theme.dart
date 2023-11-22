@@ -68,17 +68,17 @@ class PersonalMeTheme {
     ),
     bodyLarge: GoogleFonts.openSans(
       fontSize: 16.0,
-      fontWeight: FontWeight.w600,
+      fontWeight: FontWeight.w500,
       color: Colors.black,
     ),
     bodyMedium: GoogleFonts.openSans(
       fontSize: 14.0,
-      fontWeight: FontWeight.w600,
+      fontWeight: FontWeight.w500,
       color: Colors.black,
     ),
     bodySmall: GoogleFonts.openSans(
       fontSize: 12.0,
-      fontWeight: FontWeight.w600,
+      fontWeight: FontWeight.w500,
       color: Colors.black,
     ),
   );
@@ -146,17 +146,17 @@ class PersonalMeTheme {
     ),
     bodyLarge: GoogleFonts.openSans(
       fontSize: 16.0,
-      fontWeight: FontWeight.w600,
+      fontWeight: FontWeight.w400,
       color: Colors.grey[400],
     ),
     bodyMedium: GoogleFonts.openSans(
       fontSize: 14.0,
-      fontWeight: FontWeight.w600,
+      fontWeight: FontWeight.w400,
       color: Colors.grey[400],
     ),
     bodySmall: GoogleFonts.openSans(
       fontSize: 12.0,
-      fontWeight: FontWeight.w600,
+      fontWeight: FontWeight.w400,
       color: Colors.grey[400],
     ),
   );
@@ -187,7 +187,7 @@ class PersonalMeTheme {
         titleTextStyle: const TextStyle(fontSize: 14.0, color: Colors.black),
         centerTitle: true,
         foregroundColor: Colors.grey[800],
-        backgroundColor: const Color.fromARGB(255, 124, 143, 145),
+        backgroundColor: const Color.fromARGB(255, 175, 138, 138),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ButtonStyle(
@@ -198,10 +198,6 @@ class PersonalMeTheme {
             const Size(165, 40),
           ),
         ),
-      ),
-      floatingActionButtonTheme: FloatingActionButtonThemeData(
-        foregroundColor: Colors.white,
-        backgroundColor: Colors.grey[800],
       ),
       textButtonTheme: TextButtonThemeData(
         style: ButtonStyle(
@@ -216,7 +212,16 @@ class PersonalMeTheme {
           ),
         ),
       ),
-      cardColor: Colors.grey.shade400,
+      iconButtonTheme: IconButtonThemeData(
+        style: ButtonStyle(
+          foregroundColor: MaterialStateProperty.all(Colors.grey[800]),
+        ),
+      ),
+      floatingActionButtonTheme: FloatingActionButtonThemeData(
+        foregroundColor: Colors.white,
+        backgroundColor: Colors.grey[800],
+      ),
+      cardColor: const Color.fromARGB(255, 190, 190, 190),
       cardTheme: const CardTheme(
         shape: RoundedRectangleBorder(),
       ),
@@ -255,12 +260,12 @@ class PersonalMeTheme {
     return ThemeData(
       brightness: Brightness.dark,
       primarySwatch: customDarkSwatch,
-      scaffoldBackgroundColor: Colors.grey[800],
+      scaffoldBackgroundColor: const Color.fromARGB(255, 59, 59, 59),
       appBarTheme: const AppBarTheme(
         titleTextStyle: TextStyle(fontSize: 14.0, color: Colors.white),
         centerTitle: true,
-        foregroundColor: Color.fromARGB(255, 176, 178, 179),
-        backgroundColor: Color.fromARGB(255, 63, 60, 60),
+        foregroundColor: Color.fromRGBO(175, 175, 175, 1),
+        backgroundColor: Color.fromRGBO(88, 69, 69, 1),
       ),
       iconTheme: const IconThemeData(
         color: Color.fromARGB(255, 176, 178, 179),
@@ -272,11 +277,23 @@ class PersonalMeTheme {
           ),
         ),
       ),
+      textButtonTheme: TextButtonThemeData(
+        style: ButtonStyle(
+          foregroundColor: MaterialStateProperty.all(
+              const Color.fromARGB(255, 181, 177, 233)),
+        ),
+      ),
+      iconButtonTheme: IconButtonThemeData(
+        style: ButtonStyle(
+          foregroundColor: MaterialStateProperty.all(
+              const Color.fromARGB(255, 181, 177, 233)),
+        ),
+      ),
       floatingActionButtonTheme: const FloatingActionButtonThemeData(
         foregroundColor: Colors.white,
         backgroundColor: Color.fromARGB(255, 73, 71, 71),
       ),
-      cardColor: Colors.blueGrey,
+      cardColor: const Color.fromARGB(255, 20, 25, 27),
       cardTheme: const CardTheme(
         shape: RoundedRectangleBorder(),
       ),
@@ -286,10 +303,12 @@ class PersonalMeTheme {
         backgroundColor: Colors.grey[700],
       ),
       listTileTheme: ListTileThemeData(
-          style: ListTileStyle.list,
-          tileColor: Colors.grey[800],
-          textColor: Colors.white,
-          titleTextStyle: const TextStyle(fontSize: 14.0)),
+        style: ListTileStyle.list,
+        tileColor: Colors.grey[800],
+        textColor: Colors.white,
+        titleTextStyle:
+            const TextStyle(fontSize: 14.0, fontWeight: FontWeight.w400),
+      ),
       textTheme: darkTextTheme,
     );
   }
