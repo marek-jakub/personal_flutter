@@ -21,23 +21,26 @@ class _CustomAppBarState extends State<CustomAppBar> {
   Widget build(BuildContext context) {
     return AppBar(
       automaticallyImplyLeading: false,
-      title: const Row(
+      title: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Flexible(
             fit: FlexFit.tight,
-            child: Image(
-              width: 60,
-              height: 60,
-              fit: BoxFit.scaleDown,
-              image: AssetImage('assets/images/02_logo.png'),
+            child: GestureDetector(
+              onTap: () => Navigator.pushNamed(context, '/'),
+              child: const Image(
+                width: 60,
+                height: 60,
+                fit: BoxFit.scaleDown,
+                image: AssetImage('assets/images/02_logo.png'),
+              ),
             ),
           ),
-          Flexible(
+          const Flexible(
             fit: FlexFit.loose,
             child: CustomNavigation(),
           ),
-          Flexible(
+          const Flexible(
             fit: FlexFit.loose,
             child: CustomModeSelection(),
           ),
