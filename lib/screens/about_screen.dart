@@ -22,18 +22,20 @@ class _AboutScreenState extends State<AboutScreen> {
 
     return Consumer<StateManager>(builder: (context, stateManager, child) {
       return Scaffold(
-        appBar: const PreferredSize(
-          preferredSize: Size.fromHeight(60.0),
-          child: CustomAppBar(),
-        ),
-        body: Container(
-          alignment: Alignment.topCenter,
-          child: SingleChildScrollView(
-            child: screenWidth < 800
-                ? smallScreenLayout()
-                : screenWidth < 1200
-                    ? mediumScreenLayout()
-                    : largeScreenLayout(),
+        // appBar: const PreferredSize(
+        //   preferredSize: Size.fromHeight(60.0),
+        //   child: CustomAppBar(),
+        // ),
+        body: CustomSliverAppBar(
+          container: Container(
+            alignment: Alignment.topCenter,
+            child: SingleChildScrollView(
+              child: screenWidth < 800
+                  ? smallScreenLayout()
+                  : screenWidth < 1200
+                      ? mediumScreenLayout()
+                      : largeScreenLayout(),
+            ),
           ),
         ),
       );

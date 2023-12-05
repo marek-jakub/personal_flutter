@@ -21,18 +21,20 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
     return Consumer<StateManager>(
       builder: (context, stateManager, child) {
         return Scaffold(
-          appBar: const PreferredSize(
-            preferredSize: Size.fromHeight(60.0),
-            child: CustomAppBar(),
-          ),
-          body: Container(
-            alignment: Alignment.topCenter,
-            child: SingleChildScrollView(
-              child: screenWidth < 700
-                  ? smallScreenLayout()
-                  : screenWidth < 1200
-                      ? mediumScreenLayout()
-                      : largeScreenLayout(),
+          // appBar: const PreferredSize(
+          //   preferredSize: Size.fromHeight(60.0),
+          //   child: CustomSliverAppBar(),
+          // ),
+          body: CustomSliverAppBar(
+            container: Container(
+              alignment: Alignment.topCenter,
+              child: SingleChildScrollView(
+                child: screenWidth < 700
+                    ? smallScreenLayout()
+                    : screenWidth < 1200
+                        ? mediumScreenLayout()
+                        : largeScreenLayout(),
+              ),
             ),
           ),
         );

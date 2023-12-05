@@ -24,39 +24,41 @@ class _ProviderErrorArticleState extends State<ProviderErrorArticle> {
     return Consumer<StateManager>(
       builder: (context, stateManager, child) {
         return Scaffold(
-          appBar: const PreferredSize(
-            preferredSize: Size.fromHeight(60.0),
-            child: CustomAppBar(),
-          ),
-          body: SingleChildScrollView(
-            child: FutureBuilder<String>(
-              future: getArticle(),
-              builder: (context, snapshot) {
-                if (snapshot.hasData) {
-                  return Container(
-                    alignment: Alignment.topCenter,
-                    child: SingleChildScrollView(
-                      child: screenWidth < 700
-                          ? smallScreenLayout(snapshot.data)
-                          : screenWidth < 1200
-                              ? mediumScreenLayout(snapshot.data)
-                              : largeScreenLayout(snapshot.data),
-                    ),
-                  );
-                } else if (snapshot.hasError) {
-                  return Container(
-                    alignment: Alignment.topCenter,
-                    child: SingleChildScrollView(
-                      child: screenWidth < 700
-                          ? smallScreenLayout('Error loading article')
-                          : screenWidth < 1200
-                              ? mediumScreenLayout('Error loading article')
-                              : largeScreenLayout('Error loading article'),
-                    ),
-                  );
-                }
-                return const CircularProgressIndicator();
-              },
+          // appBar: const PreferredSize(
+          //   preferredSize: Size.fromHeight(60.0),
+          //   child: CustomAppBar(),
+          // ),
+          body: CustomSliverAppBar(
+            container: SingleChildScrollView(
+              child: FutureBuilder<String>(
+                future: getArticle(),
+                builder: (context, snapshot) {
+                  if (snapshot.hasData) {
+                    return Container(
+                      alignment: Alignment.topCenter,
+                      child: SingleChildScrollView(
+                        child: screenWidth < 700
+                            ? smallScreenLayout(snapshot.data)
+                            : screenWidth < 1200
+                                ? mediumScreenLayout(snapshot.data)
+                                : largeScreenLayout(snapshot.data),
+                      ),
+                    );
+                  } else if (snapshot.hasError) {
+                    return Container(
+                      alignment: Alignment.topCenter,
+                      child: SingleChildScrollView(
+                        child: screenWidth < 700
+                            ? smallScreenLayout('Error loading article')
+                            : screenWidth < 1200
+                                ? mediumScreenLayout('Error loading article')
+                                : largeScreenLayout('Error loading article'),
+                      ),
+                    );
+                  }
+                  return const CircularProgressIndicator();
+                },
+              ),
             ),
           ),
         );

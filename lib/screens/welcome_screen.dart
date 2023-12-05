@@ -23,18 +23,20 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     return Consumer<StateManager>(
       builder: (context, stateManager, child) {
         return Scaffold(
-          appBar: const PreferredSize(
-            preferredSize: Size.fromHeight(60.0),
-            child: CustomAppBar(),
-          ),
-          body: Container(
-            alignment: Alignment.topCenter,
-            child: SingleChildScrollView(
-              child: screenWidth < 700
-                  ? smallScreenLayout(invite)
-                  : screenWidth < 1200
-                      ? mediumScreenLayout(invite)
-                      : largeScreenLayout(invite),
+          // appBar: const PreferredSize(
+          //   preferredSize: Size.fromHeight(60.0),
+          //   child: CustomSliverAppBar(),
+          // ),
+          body: CustomSliverAppBar(
+            container: Container(
+              alignment: Alignment.topCenter,
+              child: SingleChildScrollView(
+                child: screenWidth < 700
+                    ? smallScreenLayout(invite)
+                    : screenWidth < 1200
+                        ? mediumScreenLayout(invite)
+                        : largeScreenLayout(invite),
+              ),
             ),
           ),
         );
