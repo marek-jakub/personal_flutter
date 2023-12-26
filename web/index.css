@@ -8,13 +8,13 @@ body {
   align-items: center;
   height: 100dvh;
   margin: 0;
-  background-color: #dbdbdb;
+  background-color: #dddddd;
 }
 
 .spinner1 {
   border: 5px solid rgba(0, 0, 0, 1);
   border-radius: 50%;
-  border-top: 5px solid #c29a98;
+  border-top: 5px solid #b9b9b9;
   width: 70px;
   height: 70px;
   animation: spin 1s linear infinite;
