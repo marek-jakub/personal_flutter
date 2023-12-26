@@ -187,7 +187,7 @@ class PersonalMeTheme {
         titleTextStyle: const TextStyle(fontSize: 14.0, color: Colors.black),
         centerTitle: true,
         foregroundColor: Colors.grey[800],
-        backgroundColor: const Color.fromARGB(255, 175, 138, 138),
+        backgroundColor: Colors.grey[400],
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ButtonStyle(
@@ -260,12 +260,12 @@ class PersonalMeTheme {
     return ThemeData(
       brightness: Brightness.dark,
       primarySwatch: customDarkSwatch,
-      scaffoldBackgroundColor: const Color.fromARGB(255, 59, 59, 59),
-      appBarTheme: const AppBarTheme(
-        titleTextStyle: TextStyle(fontSize: 14.0, color: Colors.white),
+      scaffoldBackgroundColor: Colors.grey[800],
+      appBarTheme: AppBarTheme(
+        titleTextStyle: const TextStyle(fontSize: 14.0, color: Colors.white),
         centerTitle: true,
-        foregroundColor: Color.fromRGBO(175, 175, 175, 1),
-        backgroundColor: Color.fromRGBO(88, 69, 69, 1),
+        foregroundColor: Colors.grey[400],
+        backgroundColor: Colors.brown[800],
       ),
       iconTheme: const IconThemeData(
         color: Color.fromARGB(255, 176, 178, 179),
