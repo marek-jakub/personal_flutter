@@ -76,7 +76,7 @@ class CustomContainer extends StatelessWidget {
                 _articleText,
                 textAlign: TextAlign.justify,
                 softWrap: true,
-                maxLines: 15,
+                maxLines: 12,
                 overflow: TextOverflow.ellipsis,
                 style: TextStyle(
                   fontSize: _fontSize,
