@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import '../models/models.dart';
 import '../widgets/widgets.dart';
 import '../screens/articles/invite_text.dart';
+import '../screens/articles/invite_text_2024.dart';
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({
@@ -19,6 +20,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   Widget build(BuildContext context) {
     final double screenWidth = MediaQuery.of(context).size.width;
     final TextInvite invite = TextInvite();
+    final TextInvite24 invite24 = TextInvite24();
 
     return Consumer<StateManager>(
       builder: (context, stateManager, child) {
@@ -32,10 +34,10 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               alignment: Alignment.topCenter,
               child: SingleChildScrollView(
                 child: screenWidth < 700
-                    ? smallScreenLayout(invite)
+                    ? smallScreenLayout(invite, invite24)
                     : screenWidth < 1200
-                        ? mediumScreenLayout(invite)
-                        : largeScreenLayout(invite),
+                        ? mediumScreenLayout(invite, invite24)
+                        : largeScreenLayout(invite, invite24),
               ),
             ),
           ),
@@ -44,7 +46,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     );
   }
 
-  Widget smallScreenLayout(TextInvite invite) {
+  Widget smallScreenLayout(TextInvite invite, TextInvite24 invite24) {
     return SizedBox(
       child: Column(
         children: [
@@ -56,6 +58,16 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 CustomContainer(
                     width: 400,
                     height: 400,
+                    date: invite24.article8['articleDate'].toString(),
+                    articleName: invite24.article8['articleName'].toString(),
+                    articlePath: '/usabilityQ30',
+                    articleText: invite24.article8['articleText'].toString(),
+                    titleSize: 14,
+                    fontSize: 12,
+                    boxColor: Colors.grey),
+                CustomContainer(
+                    width: 400,
+                    height: 400,
                     date: invite.article7['articleDate'].toString(),
                     articleName: invite.article7['articleName'].toString(),
                     articlePath: '/pgadminerror',
@@ -132,7 +144,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     );
   }
 
-  Widget mediumScreenLayout(TextInvite invite) {
+  Widget mediumScreenLayout(TextInvite invite, TextInvite24 invite24) {
     return SizedBox(
       child: Column(
         children: [
@@ -144,6 +156,16 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 CustomContainer(
                     width: 500,
                     height: 500,
+                    date: invite24.article8['articleDate'].toString(),
+                    articleName: invite24.article8['articleName'].toString(),
+                    articlePath: '/usabilityQ30',
+                    articleText: invite24.article8['articleText'].toString(),
+                    titleSize: 15,
+                    fontSize: 14,
+                    boxColor: Colors.grey),
+                CustomContainer(
+                    width: 500,
+                    height: 500,
                     date: invite.article7['articleDate'].toString(),
                     articleName: invite.article7['articleName'].toString(),
                     articlePath: '/pgadminerror',
@@ -220,7 +242,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     );
   }
 
-  Widget largeScreenLayout(TextInvite invite) {
+  Widget largeScreenLayout(TextInvite invite, TextInvite24 invite24) {
     return SizedBox(
       child: Column(
         children: [
@@ -232,6 +254,18 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                    CustomContainer(
+                        width: 500,
+                        height: 500,
+                        date: invite24.article8['articleDate'].toString(),
+                        articleName:
+                            invite24.article8['articleName'].toString(),
+                        articlePath: '/usabilityQ30',
+                        articleText:
+                            invite24.article8['articleText'].toString(),
+                        titleSize: 16,
+                        fontSize: 14,
+                        boxColor: Colors.grey),
                     CustomContainer(
                         width: 500,
                         height: 500,

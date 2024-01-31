@@ -8,3 +8,5 @@ export '../articles/2022/info_tech/traversal_article.dart';
 // Year 2023
 export '2023/info_tech/dart_provider_article.dart';
 export '2023/info_tech/pgadmin_error_article.dart';
+// Year 2024
+export '2024/info_tech/usability_Q30_article.dart';

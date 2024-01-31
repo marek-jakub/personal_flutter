@@ -59,6 +59,21 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           CustomClickableArticle(
+                            date: '31 Jan 2024',
+                            articleName:
+                                'Users dislike typing, simplify input tasks',
+                            articlePath: '/usabilityQ30',
+                            fontSize: 12,
+                          ),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(0, 0, 0, 30),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          CustomClickableArticle(
                             date: '14 Nov 2023',
                             articleName:
                                 'Error: Failed to create the directory pgadmin…',
@@ -152,6 +167,21 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           CustomClickableArticle(
+                            date: '31 Jan 2024',
+                            articleName:
+                                'Users dislike typing, simplify input tasks',
+                            articlePath: '/usabilityQ30',
+                            fontSize: 15,
+                          ),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(0, 0, 0, 30),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          CustomClickableArticle(
                             date: '14 Nov 2023',
                             articleName:
                                 'Error: Failed to create the directory pgadmin…',
@@ -239,6 +269,21 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(0, 0, 0, 30),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          CustomClickableArticle(
+                            date: '31 Jan 2024',
+                            articleName:
+                                'Users dislike typing, simplify input tasks',
+                            articlePath: '/usabilityQ30',
+                            fontSize: 15,
+                          ),
+                        ],
+                      ),
+                    ),
                     Padding(
                       padding: EdgeInsets.fromLTRB(0, 0, 0, 30),
                       child: Column(

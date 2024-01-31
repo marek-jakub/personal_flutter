@@ -38,6 +38,9 @@ class RouteGenerator {
       case '/pgadminerror':
         return MaterialPageRoute(
             settings: settings, builder: (_) => const PgadminErrorArticle());
+      case '/usabilityQ30':
+        return MaterialPageRoute(
+            settings: settings, builder: (_) => const UabilityQ30());
       default:
         return _errorRoute();
     }

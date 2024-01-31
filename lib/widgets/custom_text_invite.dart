@@ -60,15 +60,20 @@ class CustomContainer extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.fromLTRB(0, 15, 0, 0),
-              child: Text(
-                _articleName,
-                style: TextStyle(fontSize: _titleSize),
+              child: TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, _articlePath);
+                },
+                child: Text(
+                  _articleName,
+                  style: TextStyle(fontSize: _titleSize),
+                ),
               ),
             ),
             Padding(
               padding: const EdgeInsets.fromLTRB(10, 15, 10, 15),
               child: Text(
-                _updateTextFormat(_articleText),
+                _articleText,
                 textAlign: TextAlign.justify,
                 softWrap: true,
                 maxLines: 15,
@@ -91,13 +96,5 @@ class CustomContainer extends StatelessWidget {
         ),
       ),
     );
-  }
-
-  String _updateTextFormat(String articleText) {
-    final extraWhiteSpace = RegExp(r'(?! )\s+| \s+');
-    articleText = articleText.replaceAll('\n', '');
-    articleText = articleText.replaceAll(extraWhiteSpace, ' ');
-
-    return articleText;
   }
 }
