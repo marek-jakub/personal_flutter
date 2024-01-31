@@ -23,7 +23,7 @@ class CustomBottomBar extends StatelessWidget {
         child: const Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('2023'),
+            Text('2024'),
             Icon(Icons.copyright),
             Text('Marek Jakub'),
           ],

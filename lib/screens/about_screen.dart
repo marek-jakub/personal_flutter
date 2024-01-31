@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:markup_text/markup_text.dart';
+//import 'package:markup_text/markup_text.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 //import 'package:sizer/sizer.dart';
 import 'package:flutter_sizer/flutter_sizer.dart';
